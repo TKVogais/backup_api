@@ -1,4 +1,4 @@
-# API Sistema Encanto das Frutas
+# API Platadorma Cherry Social
 
 # Versão 1.0.0
 

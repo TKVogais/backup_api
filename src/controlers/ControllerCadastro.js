@@ -1,0 +1,51 @@
+const QueryCadastro = require("../querys/QueryCadastro")
+
+const CadastroUsuario = async (req, res) => {
+    const { usuario, senha, email } = req.body
+    let response
+
+    try {
+        //Consulta no banco de dados se o usuário já está em uso.
+        response = await QueryCadastro.VerificarUsuario(usuario)
+
+        if (response.length > 0) {
+            return res.json({
+                status: 401,
+                message: `O usuário '${usuario}' já está em uso!`,
+                view: "orange"
+            })
+        }
+
+        //Consulta no banco de dados se o e-mail já está em uso.
+        response = await QueryCadastro.VerificarEmail(email)
+
+        if (response.length > 0) {
+            return res.json({
+                status: 401,
+                message: `O e-mail '${email}' já está em uso!`,
+                view: "orange"
+            })
+        }
+
+        //Inserção do usuário no banco de dados.
+        response = await QueryCadastro.CadastroUsuario(usuario, email, senha)
+
+        if (response) {
+            return res.json({
+                status: 200,
+                message: `Usuário cadastrado com sucesso!`,
+                view: "green"
+            })
+        }
+    } catch (error) {   
+        return res.json({
+            status: 200,
+            message: `${error} catch`,
+            view: "red"
+        })
+    }
+
+}
+
+
+module.exports = { CadastroUsuario }

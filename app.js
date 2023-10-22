@@ -39,9 +39,9 @@ routes.forEach((route) => {
 
 // VerificadorContas(app.locals.contas)
 
-setInterval(async () => {
-    console.log(app.locals.tracking)
-}, 3000)
+// setInterval(async () => {
+//     console.log(app.locals.tracking)
+// }, 3000)
 //Iniciando o Servidor
 
 app.listen(PORT, () => {

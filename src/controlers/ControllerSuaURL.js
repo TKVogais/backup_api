@@ -1,12 +1,9 @@
 const VerificarHost = async (req, res, next) => {
-    const host = req.headers.host
-    console.log("===========HEADERS============")
-    console.log(req.headers)
+    const referer = req.headers.referer
+    console.log("===========REQUISIÇÃO============")
+    console.log(req)
     console.log("==============================")
-    console.log("===========HOST============")
-    console.log(host)
-    console.log("==============================")
-    if (host === "localhost:4000") {
+    if (referer === "https://suaurl.com/") {
         next()
     } else {
         res.render("../views/trap")

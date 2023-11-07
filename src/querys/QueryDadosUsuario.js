@@ -41,25 +41,43 @@ const QueryDadosUsuario = {
         }
     },
     DadosSaques: async (idUsuario) => {
+        const QuerySaque = `
+            SELECT
+	            S.idsaque as idSaque,
+                S.DATA AS data,
+                S.STATUS AS status,
+                S.VALOR AS valor,
+                U.PIX AS pix,
+                u.Banco as banco,
+                u.recebedor as recebedor,
+                u.nome as nome
+            FROM SAQUES AS S INNER JOIN USUARIOS AS U ON U.IDUSUARIO = S.IDUSUARIO
+            WHERE u.idusuario = ${idUsuario}`
         try {
-            const data = await Saques.findAll(
-                {
-                    where: { idUsuario: idUsuario },
-                    attributes: {
-                        exclude: ['idUsuario', 'createdAt', 'updatedAt']
-                    }
-                })
-            return data
+            const [result] = await database.query(QuerySaque)
+            return result
         } catch (error) {
             throw "Falha na conexão com o banco de dados!"
         }
     },
-    AtualizarSaldo: async (idUsuario, valor, operation = "menos") => {
-        console.log(idUsuario, valor, operation)
+    AtualizarSaldo: async (idUsuario, valor, operation = "menos", desafio = false) => {
         try {
             const data = await Usuarios.increment({
-                saldo: operation == "menos" ? parseFloat(-valor) : parseFloat(valor)
+                saldo: operation == "menos" ? parseFloat(-valor) : parseFloat(valor),
+                totalDesafios: desafio ? 1 : 0
             }, {
+                where: {
+                    idUsuario: idUsuario,
+                },
+            });
+            return data
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados - Atualizar Saldo!"
+        }
+    },
+    AtualizarStatusConta: async (idUsuario) => {
+        try {
+            const data = await Usuarios.update({ statusConta: "BANIDA" }, {
                 where: {
                     idUsuario: idUsuario,
                 },
@@ -69,9 +87,15 @@ const QueryDadosUsuario = {
             throw "Falha na conexão com o banco de dados!"
         }
     },
-    AtualizarStatusConta: async (idUsuario) => {
+    AtualizarPerfil: async (idUsuario, avatar, nomeCompleto, pix, banco, recebedor) => {
         try {
-            const data = await Usuarios.update({ statusConta: "BANIDA" }, {
+            const data = await Usuarios.update({
+                avatar: avatar,
+                nomeCompleto: nomeCompleto,
+                pix: pix,
+                banco: banco,
+                recebedor: recebedor
+            }, {
                 where: {
                     idUsuario: idUsuario,
                 },

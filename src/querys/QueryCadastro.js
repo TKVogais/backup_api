@@ -49,5 +49,3 @@ const QueryCadastro = {
 
 
 module.exports = QueryCadastro
-
-

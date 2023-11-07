@@ -3,7 +3,6 @@ const Sequelize = require("sequelize")
 
 //Importação da Conexão com o Banco de Dados
 const database = require("../db")
-const { sq } = require("date-fns/locale")
 
 //Definição do Model Usuários
 
@@ -17,7 +16,11 @@ const Usuario = database.define('usuarios', {
     senha: Sequelize.STRING(70),
     email: Sequelize.STRING(70),
     nome: Sequelize.STRING(70),
-    avatar: Sequelize.STRING(10),
+    nomeCompleto:  {
+        type: Sequelize.STRING,
+        defaultValue: ""
+    },
+    avatar: Sequelize.STRING(30),
     totalSaques: {
         type: Sequelize.INTEGER,
         defaultValue: 0
@@ -37,7 +40,27 @@ const Usuario = database.define('usuarios', {
     statusConta:  {
         type: Sequelize.STRING,
         defaultValue: "ATIVA"
-    }
+    },
+    totalDesafios: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+    },
+    tipoUsuario:  {
+        type: Sequelize.STRING,
+        defaultValue: "USER"
+    }, 
+    pix: {
+        type: Sequelize.STRING(100),
+        defaultValue: ""    
+    },
+    banco: {
+        type: Sequelize.STRING(100),
+        defaultValue: ""
+    },
+    recebedor: {
+        type: Sequelize.STRING(100),
+        defaultValue: ""
+    },
 })
 
 module.exports = Usuario

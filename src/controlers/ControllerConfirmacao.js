@@ -1,13 +1,23 @@
+//Importação das consultas no banco de dados.
+
 const QueryDadosUsuario = require("../querys/QueryDadosUsuario")
+
+//Função que confirmar as tarefas
 
 const ConfirmarTarefa = async (req, res) => {
 
+    const rota = req.headers.referer.split('/confirmacao/')[1]
+
+
     let tracking = req.app.locals.tracking
+    let ranking = req.app.locals.ranking
     let token = req.body.token
     let tokenValido = false
     let location = 0
     let usuario = {}
     let saldo = 0
+
+    //Busca dentro do Array se token informado é válido.
 
     tracking.forEach((track, index) => {
         if (track.token === token) {
@@ -18,21 +28,27 @@ const ConfirmarTarefa = async (req, res) => {
     })
 
     if (tokenValido) {
+
         usuario = tracking[location]
+
         usuario.token = ""
         if (usuario.clicks >= 3) {
-            usuario.clicks = 0
+            usuario.clicks = 1
             usuario.rota++
         } else {
             usuario.clicks++
         }
+        req.app.locals.map[usuario.rota - 1][`${rota}`].push(usuario.idUsuario)
         switch (usuario.ultimaDificuldade) {
             case "facil": saldo = 0.008; break;
             case "medio": saldo = 0.010; break;
             case "dificil": saldo = 0.019; break;
         }
-        const [response] = await QueryDadosUsuario.AtualizarSaldo(usuario.idUsuario, saldo, "mais")
-        console.log(response)
+        ranking[location].valor += saldo
+        ranking[location].desafios += 1
+        const [response] = await QueryDadosUsuario.AtualizarSaldo(usuario.idUsuario, saldo, "mais", true)
+        req.app.locals.socket.broadcast.emit("mapeamento", req.app.locals.tracking)
+        req.app.locals.socket.broadcast.emit("ranking", req.app.locals.ranking.sort((a, b) => b.valor - a.valor))
         if (response[1] === 1) {
             res.json({
                 status: 200,

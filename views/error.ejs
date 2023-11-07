@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidado!</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        vertical-align: baseline;
+        list-style: none;
+        border: 0
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .text {
+        font-family: "Poppins";
+        text-align: center;
+    }
+
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .image {
+        height: 70%;
+        width: 50%;
+        border-radius: 20px;
+        background-color: rgb(10, 8, 68);
+        margin-bottom: 20px;
+    }
+
+    .textos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    @media(max-width: 700px) {
+        .image {
+            height: 50%;
+            width: 60%;
+            border-radius: 20px;
+            background-color: rgb(10, 8, 68);
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img class="image" src="/images/Digital lifestyle-rafiki.svg" alt="">
+        <div class="textos">
+            <h1 class="text">Novos desafios estão lhe esperando!</h1>
+            <h3 class="text">Para confirmar alguma tarefa, você precisa realizá-la primeiro!</h3>
+            <h3 class="text">Acesse o https://cherrysocial.com.br e realize os nosso desafios!</h3>
+        </div>
+    </div>
+</body>
+
+</html>

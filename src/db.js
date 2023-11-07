@@ -1,6 +1,13 @@
+//Configuração das Variáveis de Ambiente.
+
 require('dotenv').config()
+
+//Importação do módulo
+
 const Sequelize = require("sequelize")
 let db, user, pass, host
+
+//Verificação se está em modo de produção (aws) ou em desenvolvimento.
 
 if (process.env.NODE_DATABASE_MODE == "aws") {
     db = process.env.NODE_DB_AWS
@@ -14,9 +21,14 @@ if (process.env.NODE_DATABASE_MODE == "aws") {
     host = process.env.NODE_HOST_LOCAL
 }
 
+//Configuração da Conexão com o banco de dados.
+
 const sequelize = new Sequelize(db, user, pass, {
     dialect: 'mysql',
-    logging: false,
+    logging: true,
     host: host
 })
+
+//Exportação
+
 module.exports = sequelize

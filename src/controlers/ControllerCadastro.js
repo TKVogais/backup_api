@@ -1,4 +1,8 @@
+//Importação das consultas no banco de dados.
+
 const QueryCadastro = require("../querys/QueryCadastro")
+
+//Função de cadastro do usuário.
 
 const CadastroUsuario = async (req, res) => {
     const { usuario, senha, email } = req.body
@@ -37,10 +41,10 @@ const CadastroUsuario = async (req, res) => {
                 view: "green"
             })
         }
-    } catch (error) {   
+    } catch (error) {
         return res.json({
             status: 200,
-            message: `${error} catch`,
+            message: `Falha ao realizar o cadastro do usuário ${usuario}`,
             view: "red"
         })
     }

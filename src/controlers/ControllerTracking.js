@@ -1,14 +1,11 @@
 const geradorTokenConfirmacao = require("../utils/stringAleatoria")
+const { rotas } = require("../utils/config-route-sua-url")
 
 const Redirecionamento = async (req, res) => {
-
     const idUsuario = req.body.idUsuario
     const dificuldade = req.body.dificuldade
-    const routes = [{
-        facil: "http://localhost:4000/api/confirmacao/facil100",
-        medio: "http://localhost:4000/api/confirmacao/medio100",
-        dificil: "http://localhost:4000/api/confirmacao/dificil100",
-    }]
+    const nome = req.body.usuario
+    const limite = req.app.locals.limite
     let valor = 0
 
     switch (dificuldade) {
@@ -21,6 +18,7 @@ const Redirecionamento = async (req, res) => {
     let location = 0
     let tokenCriado = true
     let token
+
     req.app.locals.tracking.forEach((track, index) => {
         if (track.idUsuario == idUsuario) {
             location = index
@@ -40,18 +38,47 @@ const Redirecionamento = async (req, res) => {
     if (!usuario) {
         req.app.locals.tracking.push({
             idUsuario: idUsuario,
+            usuario: nome,
             rota: 1,
             clicks: 0,
             token: token,
             ultimaDificuldade: ""
         })
+        req.app.locals.ranking.push({
+            idUsuario: idUsuario,
+            usuario: nome,
+            valor: 0,
+            desafios: 0
+        })
+        location = req.app.locals.tracking.length - 1
     }
-    const nRota = req.app.locals.tracking[location].rota - 1
+    let nRota = req.app.locals.tracking[location].rota - 1
+    let clicks = req.app.locals.tracking[location].clicks
+
+    if (clicks + 1 > 3) {
+        nRota += 1
+        clicks = 1
+        if (nRota + 1 > limite) {
+            return res.json({
+                limite: true,
+                message: "Você atingiu o limite diário de desafio!"
+            })
+        }
+    } else {
+        clicks += 1
+    }
     req.app.locals.tracking[location].ultimaDificuldade = dificuldade
     req.app.locals.tracking[location].token = token
+
+    const posicao = `${dificuldade}${clicks}`
+    try {
+        req.app.locals.socket.emit("mapeamento", req.app.locals.tracking)
+    } catch (error) {
+
+    }
     res.json({
         valor: valor,
-        URL: `${routes[nRota][dificuldade]}`,
+        URL: `${rotas[nRota][posicao]}`,
         token: token
     })
 }

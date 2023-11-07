@@ -9,7 +9,7 @@ const Usuarios = require("./Usuarios")
 
 //Definição do Model Conta
 const Saque = database.define('saques', {
-    idSaldo: {
+    idSaque: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -30,8 +30,7 @@ const Saque = database.define('saques', {
     valor: {
         type: Sequelize.DOUBLE,
         defaultValue: 0
-    },
-    pix: Sequelize.STRING(15)
+    }
 })
 
 //Criação do relacionamento entre conta e plataforma (idPlataforma)

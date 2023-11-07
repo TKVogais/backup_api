@@ -43,20 +43,21 @@ const QueryDadosUsuario = {
     DadosSaques: async (idUsuario) => {
         const QuerySaque = `
             SELECT
-	            S.idsaque as idSaque,
-                S.DATA AS data,
-                S.STATUS AS status,
-                S.VALOR AS valor,
-                U.PIX AS pix,
-                u.Banco as banco,
-                u.recebedor as recebedor,
-                u.nome as nome
-            FROM SAQUES AS S INNER JOIN USUARIOS AS U ON U.IDUSUARIO = S.IDUSUARIO
-            WHERE u.idusuario = ${idUsuario}`
+	            S.idSaque as idSaque,
+                S.data AS data,
+                S.status AS status,
+                S.valor AS valor,
+                U.pix AS pix,
+                U.banco as banco,
+                U.recebedor as recebedor,
+                U.nome as nome
+            FROM saques AS S INNER JOIN usuarios AS U ON U.idUsuario = S.idUsuario
+            WHERE U.idUsuario = ${idUsuario}`
         try {
             const [result] = await database.query(QuerySaque)
             return result
         } catch (error) {
+            console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
     },

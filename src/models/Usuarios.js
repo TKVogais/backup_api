@@ -16,11 +16,14 @@ const Usuario = database.define('usuarios', {
     senha: Sequelize.STRING(70),
     email: Sequelize.STRING(70),
     nome: Sequelize.STRING(70),
-    nomeCompleto:  {
+    nomeCompleto: {
         type: Sequelize.STRING,
         defaultValue: ""
     },
-    avatar: Sequelize.STRING(30),
+    avatar: {
+        type: Sequelize.STRING(30),
+        defaultValue: "/pessoa1.png"
+    },
     totalSaques: {
         type: Sequelize.INTEGER,
         defaultValue: 0
@@ -37,7 +40,7 @@ const Usuario = database.define('usuarios', {
         type: Sequelize.DOUBLE,
         defaultValue: 0
     },
-    statusConta:  {
+    statusConta: {
         type: Sequelize.STRING,
         defaultValue: "ATIVA"
     },
@@ -45,13 +48,13 @@ const Usuario = database.define('usuarios', {
         type: Sequelize.INTEGER,
         defaultValue: 0
     },
-    tipoUsuario:  {
+    tipoUsuario: {
         type: Sequelize.STRING,
         defaultValue: "USER"
-    }, 
+    },
     pix: {
         type: Sequelize.STRING(100),
-        defaultValue: ""    
+        defaultValue: ""
     },
     banco: {
         type: Sequelize.STRING(100),

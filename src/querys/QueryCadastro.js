@@ -37,7 +37,7 @@ const QueryCadastro = {
                 nome: usuario,
                 senha: await hash(senha),
                 email: email,
-                avatar: "default"
+                avatar: "/pessoa1.png"
             })
         } catch (error) {
             console.log(error)

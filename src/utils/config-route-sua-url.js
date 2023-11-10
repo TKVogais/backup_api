@@ -1,15 +1,15 @@
 const rotas = [
     {
-        facil1: "https://mineurl.com/94171f ",
-        medio1: "https://mineurl.com/f330bc",
-        dificil1: "https://mineurl.com/2afa85",
-        facil2: "https://mineurl.com/c3aa8d",
-        medio2: "https://mineurl.com/acb74d",
-        dificil2: "https://mineurl.com/da5490",
-        facil3: "https://mineurl.com/a0e84c",
-        medio3: "https://mineurl.com/6b4b05",
-        dificil3: "https://mineurl.com/383b0c",
-    }
+        facil1: "https://mineurl.com/931cad",
+        medio1: "https://mineurl.com/e3f207",
+        dificil1: "https://mineurl.com/8cfe01",
+        facil2: "https://mineurl.com/8cfe01",
+        medio2: "https://mineurl.com/d5cc13",
+        dificil2: "https://mineurl.com/d5cc13",
+        facil3: "https://mineurl.com/ebed34",
+        medio3: "https://mineurl.com/271bcf",
+        dificil3: "https://mineurl.com/3d718d",
+    } 
 ]
 
 const mapeamentoRotas = {

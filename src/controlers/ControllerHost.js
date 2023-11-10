@@ -1,6 +1,6 @@
 const VerificarHost = async (req, res, next) => {
     const referer = req.headers.referer
-    if (referer == "http://localhost:3000") {
+    if (referer.includes("https://suaurl.com")) {
         next()
     } else {
         res.render("../views/error")

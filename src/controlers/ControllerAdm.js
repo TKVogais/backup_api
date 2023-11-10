@@ -103,6 +103,11 @@ const ValidarTokenUser = async (req, res) => {
     }
 }
 
+
+const cadastarRotas = async (req, res) => {
+    const { nRota, dificuldade, link, redirect, valor } = req.body
+}
+
 module.exports = {
     listarDadosAdmin,
     alterarStatusConta,

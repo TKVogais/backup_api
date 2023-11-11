@@ -18,12 +18,14 @@ const tarefa_recusada = `
 </div>`
 
 btn_confirmar.addEventListener("click", async () => {
-    const response = await axios.post("http://localhost:4000/api/confirmar-tarefa", {
+    const mode = "nuvem"
+    const url = `${mode == "nuvem" ? "https://encanto-service.online/" : "http://localhost:4000/"}api/confirmar-tarefa`
+    const response = await axios.post(url, {
         token: input.value
     })
     if (response.data.status == 200) {
         content_confirmar.innerHTML = tarefa_confirmada
-    }else{
+    } else {
         content_confirmar.innerHTML = tarefa_recusada
     }
 })

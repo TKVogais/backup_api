@@ -2,9 +2,9 @@ const { backupServidor } = require("./backup")
 
 const AnalysisServer = async (app) => {
 
-    if(!app.locals.manutencao.emManutencao){
-        await backupServidor(app)
-    }
+    // if(!app.locals.manutencao.emManutencao){
+    //     await backupServidor(app)
+    // }
     
     const date = new Date()
     const horas = date.toLocaleTimeString().slice(0, 2)

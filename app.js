@@ -14,11 +14,12 @@ const ws = new Server(server, {
 const cors = require('cors');
 const routes = require("./config-routes")
 const path = require('path')
-const { loadInfo} = require("./src/utils/monitoramento")
 
 //Importação das configurações de rotas
 
-const { rotas, mapeamentoRotas } = require("./src/utils/config-route-sua-url");
+
+const { AnalysisServer } = require("./src/utils/analirics");
+
 
 
 //Configuração das politícas de acesso (todos os IP's)
@@ -41,15 +42,21 @@ app.use(express.static(path.join(__dirname, '/public')))
 //Array's para controle de funcionalidades da API
 
 app.locals.tracking = []
-app.locals.limite = rotas.length
-app.locals.map = []
+app.locals.limite = 0
+app.locals.rotas = []
+app.locals.map = {}
 app.locals.ranking = []
 app.locals.banlist = []
+app.locals.manutencao = {
+    emManutencao: true,
+    motivo: "Inicialização do Servidor",
+    tempo: "1 ~ 5 Minutos"
+}
 
-rotas.forEach((rota) => {
-    app.locals.map.push(mapeamentoRotas)
-})
 
+setInterval(async () => {
+    await AnalysisServer(app)
+}, 2000)
 const PORT = process.env.PORT || 4000;
 
 
@@ -61,14 +68,6 @@ routes.forEach((route) => {
 
 //Iniciando os servidores
 
-
-ws.on('connection', async (socket) => {
-    socket.on("disconnect", () => {
-
-    })
-    app.locals.socket = socket
-    await loadInfo(socket)
-});
 
 server.listen(PORT, () => {
     console.log("Rodando o API na porta " + PORT);

@@ -6,3 +6,4 @@
 .env
 /.vscode
 .db_sync.js
+/.teste.js

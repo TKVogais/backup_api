@@ -25,7 +25,7 @@ if (process.env.NODE_DATABASE_MODE == "aws") {
 
 const sequelize = new Sequelize(db, user, pass, {
     dialect: 'mysql',
-    logging: true,
+    logging: false,
     host: host
 })
 

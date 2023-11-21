@@ -19,15 +19,42 @@ const Rota = database.define('rotas', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    dificuldade: {
-        type: Sequelize.STRING(15),
-        allowNull: false,
+    facil1: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
     },
-    link: Sequelize.STRING,
-    redirecionamento: Sequelize.STRING,
-    valor: {
-        type: Sequelize.DOUBLE,
-        defaultValue: 0
+    medio1: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    dificil1: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    facil2: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    medio2: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    dificil2: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    }
+    ,
+    facil3: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    medio3: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
+    },
+    dificil3: {
+        type: Sequelize.STRING(50),
+        defaultvalue: ""
     }
 })
 

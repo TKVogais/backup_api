@@ -34,11 +34,12 @@ const ConfirmarTarefa = async (req, res) => {
         usuario.token = ""
         if (usuario.clicks >= 3) {
             usuario.clicks = 1
-            usuario.rota++
+            usuario.rota = usuario.rota + 1
         } else {
             usuario.clicks++
         }
-        req.app.locals.map[usuario.rota - 1][`${rota}`].push(usuario.idUsuario)
+
+        req.app.locals.map[`R${usuario.rota}${rota}`].push(usuario.idUsuario)
         switch (usuario.ultimaDificuldade) {
             case "facil": saldo = 0.008; break;
             case "medio": saldo = 0.010; break;
@@ -47,8 +48,6 @@ const ConfirmarTarefa = async (req, res) => {
         ranking[location].valor += saldo
         ranking[location].desafios += 1
         const [response] = await QueryDadosUsuario.AtualizarSaldo(usuario.idUsuario, saldo, "mais", true)
-        req.app.locals.socket.broadcast.emit("mapeamento", req.app.locals.tracking)
-        req.app.locals.socket.broadcast.emit("ranking", req.app.locals.ranking.sort((a, b) => b.valor - a.valor))
         if (response[1] === 1) {
             res.json({
                 status: 200,

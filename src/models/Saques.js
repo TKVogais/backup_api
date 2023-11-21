@@ -23,6 +23,18 @@ const Saque = database.define('saques', {
         type: Sequelize.STRING(30),
         allowNull: false,
     },
+    pix: {
+        type: Sequelize.STRING(100),
+        defaultValue: ""
+    },
+    banco: {
+        type: Sequelize.STRING(40),
+        defaultValue: ""
+    },
+    recebedor: {
+        type: Sequelize.STRING(100),
+        defaultValue: ""
+    },
     status: {
         type: Sequelize.STRING(15),
         defaultValue: "PENDENTE"

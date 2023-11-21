@@ -5,6 +5,8 @@ const database = require("../db")
 //Importação da model Usuários
 const Usuarios = require("../models/Usuarios")
 const Saques = require("../models/Saques")
+const Rota = require("../models/Rotas")
+const Avatar = require("../models/Avatares")
 //Objeto de consultas
 
 const Query = `SELECT
@@ -13,9 +15,9 @@ S.idUsuario AS idUsuario,
 S.data AS data,
 S.status AS status,
 S.valor AS valor,
-U.pix AS pix,
-U.banco as banco,
-U.recebedor as recebedor,
+S.pix AS pix,
+S.banco as banco,
+S.recebedor as recebedor,
 U.nome as nome
 FROM saques AS S INNER JOIN usuarios AS U ON U.idUsuario = S.idUsuario`
 
@@ -65,6 +67,66 @@ const QueryAdmin = {
                 }
             })
         } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    BuscarRotas: async (nRota) => {
+        try {
+            return await Rota.findOne({
+                where: { nRota: nRota }
+            })
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    CadastrarRota: async (data) => {
+        const { nRota, facil1, medio1, dificil1, facil2, medio2, dificil2, facil3, medio3, dificil3 } = data
+        try {
+            return await Rota.create({
+                nRota: nRota,
+                facil1: facil1,
+                medio1: medio1,
+                dificil1: dificil1,
+                facil2: facil2,
+                medio2: medio2,
+                dificil2: dificil2,
+                facil3: facil3,
+                medio3: medio3,
+                dificil3: dificil3
+            })
+        } catch (error) {
+            console.log(error)
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    BuscarTodasRotas: async (type = "admin") => {
+        try {
+            if(type == "admin"){
+                return await Rota.findAll()
+            }else{
+                return await Rota.findAll({
+                    attributes: {
+                        exclude: [
+                            'idRota',
+                            'nRota',
+                            'createdAt',
+                            'updatedAt'
+                        ]
+                    }
+                })
+            }
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    InserirAvatar: async (idUsuario, avatar) => {
+        try {
+            return await Avatar.create({
+                avatar: avatar,
+                idUsuario: idUsuario
+            })
+        } catch (error) {
+            console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
     }

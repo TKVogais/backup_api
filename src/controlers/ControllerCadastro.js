@@ -40,6 +40,12 @@ const CadastroUsuario = async (req, res) => {
                 message: `Usuário cadastrado com sucesso!`,
                 view: "green"
             })
+        } else {
+            return res.json({
+                status: 400,
+                message: `Falha ao realizar o cadastro do usuário ${usuario}`,
+                view: "red"
+            })
         }
     } catch (error) {
         return res.json({

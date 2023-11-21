@@ -3,7 +3,7 @@
 const express = require('express')
 const router = express.Router();
 const { tokenPayload, validarToken } = require("../src/utils/jwt")
-
+const ControllerAutenticacao = require("../src/controlers/ControllerAutenticacao")
 //Rotas
 
 router.get('/modo-dashboard', async (req, res) => {
@@ -22,19 +22,35 @@ router.get('/modo-dashboard', async (req, res) => {
                     })
                 }
             })
-            res.json({
-                status: 200,
-                mode: payload.mode
-            })
-        } else {    
-            res.json({
+            if (payload.mode == "USER") {
+                if (req.app.locals.manutencao.emManutencao) {
+                    return res.json({
+                        status: 702,
+                        mode: "USER",
+                        motivo: req.app.locals.manutencao.motivo,
+                        tempo: req.app.locals.manutencao.tempo
+                    })
+                } else {
+                    return res.json({
+                        status: 200,
+                        mode: "USER"
+                    })
+                }
+            } else {
+                return res.json({
+                    status: 200,
+                    mode: "ADMIN"
+                })
+            }
+        } else {
+            return res.json({
                 status: 601,
                 message: "Token inválido",
                 mode: "USER"
             })
         }
     } catch (error) {
-        res.json({
+        return res.json({
             status: 601,
             message: "Token inválido",
             mode: "USER"

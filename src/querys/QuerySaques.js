@@ -7,7 +7,7 @@ const Saques = require("../models/Saques")
 
 const QuerySaque = {
 
-    CadastroSque: async (idUsuario, valor) => {
+    CadastroSaque: async (idUsuario, valor, banco, pix, recebedor) => {
         const data = new Date()
         const hoje = data.toLocaleDateString("pt-BR")
         try {
@@ -15,9 +15,11 @@ const QuerySaque = {
                 idUsuario: idUsuario,
                 valor: valor,
                 data: hoje,
+                banco: banco,
+                pix: pix,
+                recebedor: recebedor
             })
         } catch (error) {
-            console.log(error)
             throw "Falha na conexão com o banco de dados - Cadastro Saque!"
         }
     }

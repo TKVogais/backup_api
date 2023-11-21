@@ -36,7 +36,6 @@ const QueryDadosUsuario = {
                 })
             return data
         } catch (error) {
-            console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
     },
@@ -47,9 +46,9 @@ const QueryDadosUsuario = {
                 S.data AS data,
                 S.status AS status,
                 S.valor AS valor,
-                U.pix AS pix,
-                U.banco as banco,
-                U.recebedor as recebedor,
+                S.pix AS pix,
+                S.banco as banco,
+                S.recebedor as recebedor,
                 U.nome as nome
             FROM saques AS S INNER JOIN usuarios AS U ON U.idUsuario = S.idUsuario
             WHERE U.idUsuario = ${idUsuario}`
@@ -103,6 +102,32 @@ const QueryDadosUsuario = {
             });
             return data
         } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    AtualizarDadosBancarios: async (idUsuario, pix, banco, recebedor) => {
+        try {
+            const data = await Usuarios.update({
+                pix: pix,
+                banco: banco,
+                recebedor: recebedor
+            }, {
+                where: {
+                    idUsuario: idUsuario,
+                },
+            });
+            return data
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    BuscarAvatares: async (idUsuario) => {
+        const QueryAvatares = `select avatar from avatares where idUsuario = ${idUsuario}`
+        try {
+            const [result] = await database.query(QueryAvatares)
+            return result
+        } catch (error) {
+            console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
     }

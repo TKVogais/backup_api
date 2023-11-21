@@ -3,6 +3,7 @@
     const Usuarios = require('./src/models/Usuarios')
     const Saque = require('./src/models/Saques')
     const Rotas = require('./src/models/Rotas')
+    const Avatares = require('./src/models/Avatares')
     const db = require('./src/db')
 
     await db.sync({ force: true })

@@ -1,7 +1,7 @@
 const middlewareRotas = async (req, res, next) => {
     const token = req.body.token
     const tracking = req.app.locals.tracking
-    const map = req.app.locals.map
+
     const rota = req.headers.referer.split('/confirmacao/')[1]
 
     let usuario = {}
@@ -17,10 +17,9 @@ const middlewareRotas = async (req, res, next) => {
     })
 
     usuario = tracking[location]
-    idUsuario = usuario.idUsuario
-    const rotaUsuario = usuario.rota - 1
+    const map = req.app.locals.map[`R${usuario.rota}${rota}`]
 
-    map[rotaUsuario][rota].forEach((ID) => {
+    map.forEach((ID) => {
         if (idUsuario == ID) {
             return userTask = true
         }

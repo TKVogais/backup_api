@@ -39,7 +39,8 @@ const Login = async (req, res) => {
                 view: "green    ",
                 message: `Login realizado com sucesso`,
                 token: await gerarToken(id, tipoUsuario),
-                idUsuario: id
+                idUsuario: id,
+                tipoUsuario: tipoUsuario
             })
         } else {
             return res.json({

@@ -22,7 +22,7 @@ const Usuario = database.define('usuarios', {
     },
     avatar: {
         type: Sequelize.STRING(30),
-        defaultValue: "/pessoa1.png"
+        defaultValue: "/default.png"
     },
     totalSaques: {
         type: Sequelize.INTEGER,

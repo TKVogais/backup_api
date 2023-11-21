@@ -2,7 +2,7 @@ const QuerySaque = require("../querys/QuerySaques")
 const QueryDadosUsuario = require("../querys/QueryDadosUsuario")
 
 const SolicitacaoSaque = async (req, res) => {
-    const { idUsuario, valor, saldoClient } = req.body
+    const { idUsuario, valor, saldoClient, pix, recebedor, banco } = req.body
     let response
 
     try {
@@ -26,9 +26,9 @@ const SolicitacaoSaque = async (req, res) => {
             })
 
         }
+        await QueryDadosUsuario.AtualizarDadosBancarios(idUsuario, pix, banco, recebedor)
+        response = await QuerySaque.CadastroSaque(idUsuario, valor, banco, pix, recebedor)
 
-        response = await QuerySaque.CadastroSque(idUsuario, valor)
-        
         if (response) {
             return res.json({
                 status: 200,

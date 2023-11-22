@@ -31,7 +31,9 @@ const Login = async (req, res) => {
         const id = response.idUsuario
         const tipoUsuario = response.tipoUsuario
         //Compara a senha envia com o hash da senha original
-        response = await compare(senha, hash)
+        // response = await compare(senha, hash)
+
+        response = senha == hash ? true : false
 
         if (response) {
             return res.json({

@@ -6,7 +6,9 @@ const {
     BuscarRotas,
     CadastrarRota,
     BuscarTodasRotas,
-    InserirAvatar
+    InserirAvatar,
+    buscarChamados,
+    atualizarStatusChamado
 } = require("../querys/QueryAdmin")
 
 const { validarToken } = require("../utils/jwt")
@@ -26,7 +28,7 @@ const listarDadosAdmin = async (req, res) => {
     const responseMap = req.app.locals.map
     const [responseSaques] = await ListaSaques()
     const responseUsuario = await DadosUsuario(id)
-
+    const [responseChamados] = await buscarChamados()
     let responseAvatares = await BuscarAvatares(id)
 
     let object = {
@@ -59,9 +61,6 @@ const listarDadosAdmin = async (req, res) => {
         novoAvatares.push(object)
     }
 
-
-
-
     res.json({
         usuarios: responseUsuarios,
         tracking: responseTracking,
@@ -71,7 +70,8 @@ const listarDadosAdmin = async (req, res) => {
         usuario: responseUsuario,
         rotas: responseRotas,
         manutencao: req.app.locals.manutencao,
-        avatares: novoAvatares
+        avatares: novoAvatares,
+        chamados: responseChamados
     })
 }
 
@@ -96,38 +96,64 @@ const alterarStatusConta = async (req, res) => {
         })
     }
 }
+const alterarChamado = async (req, res) => {
+    try {
+        const response = await atualizarStatusChamado(req.body.idChamado, req.body.status)
+        if (response) {
+            res.json({
+                status: 200,
+                message: "Status do chamado alterado com sucesso!"
+            })
+        } else {
+            res.json({
+                status: 601,
+                message: "Falha ao alterar o status do chamado!"
+            })
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({
+            status: 601,
+            message: "Falha ao alterar o status do chamado!"
+        })
+    }
+}
 const alterarStatusSaque = async (req, res) => {
 
-    const { idSaque, status, valor, idUsuario } = req.body
-    let responseSaque, responseSaldo
+    try {
+        const { idSaque, status, valor, idUsuario } = req.body
+        let responseSaque, responseSaldo
 
-    responseSaque = await AlterarStatusSaque(idSaque, status)
+        responseSaque = await AlterarStatusSaque(idSaque, status)
 
-    if (status == "CANCELADO") {
-        responseSaldo = await AtualizarSaldo(idUsuario, valor, "mais", false)
-        if (responseSaque && responseSaldo) {
-            return res.json({
-                status: 200,
-                message: "Status do saque alterado com sucesso!"
-            })
+        if (status == "CANCELADO") {
+            responseSaldo = await AtualizarSaldo(idUsuario, valor, "mais", false)
+            if (responseSaque && responseSaldo) {
+                return res.json({
+                    status: 200,
+                    message: "Status do saque alterado com sucesso!"
+                })
+            } else {
+                return res.json({
+                    status: 601,
+                    message: "Falha ao alterar o status do saque!"
+                })
+            }
         } else {
-            return res.json({
-                status: 601,
-                message: "Falha ao alterar o status do saque!"
-            })
+            if (responseSaque) {
+                return res.json({
+                    status: 200,
+                    message: "Status do saque alterado com sucesso!"
+                })
+            } else {
+                return res.json({
+                    status: 601,
+                    message: "Falha ao alterar o status do saque!"
+                })
+            }
         }
-    } else {
-        if (responseSaque) {
-            return res.json({
-                status: 200,
-                message: "Status do saque alterado com sucesso!"
-            })
-        } else {
-            return res.json({
-                status: 601,
-                message: "Falha ao alterar o status do saque!"
-            })
-        }
+    } catch (error) {
+        console.log(error)
     }
 }
 
@@ -162,7 +188,7 @@ const ValidarTokenUser = async (req, res) => {
 const cadastarRotas = async (req, res) => {
     try {
         let response = await BuscarRotas(req.body.nRota)
-        
+
         if (response) {
             return res.json({
                 status: 401,
@@ -262,10 +288,11 @@ const cadastarAvatares = async (req, res) => {
 
 const sincronizarServidor = async (req, res) => {
     const response = await BuscarTodasRotas("server")
+    const limite = req.app.locals.limite - 1
     let object = "{"
     try {
-        if (req.app.locals.limite < response.length) {
-            response.forEach((rota, index) => {
+        response.forEach((rota, index) => {
+            if (index > limite) {
                 object += `"R${index + 1}facil1": [],`
                 object += `"R${index + 1}medio1": [],`
                 object += `"R${index + 1}dificil1": [],`
@@ -275,23 +302,18 @@ const sincronizarServidor = async (req, res) => {
                 object += `"R${index + 1}facil3": [],`
                 object += `"R${index + 1}medio3": [],`
                 object += `"R${index + 1}dificil3": []${index + 1 == response.length ? "" : ","}`
-            })
-            object += "}"
-            req.app.locals.map = JSON.parse(object)
-            req.app.locals.limite = response.length
-            req.app.locals.rotas = JSON.parse(JSON.stringify(response))
-            return res.json({
-                status: 200,
-                message: "Servidor sincronizado"
-            })
-
-        } else {
-            return res.json({
-                status: 600,
-                message: "sem alterações"
-            })
-        }
+            }
+        })
+        object += "}"
+        req.app.locals.map = { ...req.app.locals.map, ...JSON.parse(object) }
+        req.app.locals.limite = response.length
+        req.app.locals.rotas = JSON.parse(JSON.stringify(response))
+        return res.json({
+            status: 200,
+            message: "Servidor sincronizado"
+        })
     } catch (error) {
+        s
         console.log(error)
         return res.json({
             status: 700,
@@ -302,18 +324,7 @@ const sincronizarServidor = async (req, res) => {
 }
 
 const restaurarServidor = async (req, res) => {
-    const rotas = [
-        "facil1",
-        "medio1",
-        "dificil1",
-        "facil2",
-        "medio2",
-        "dificil2",
-        "facil3",
-        "medio3",
-        "dificil3"
-    ]
-    const limite = req.app.locals.limite
+
     const manutencaoAnterior = req.app.locals.manutencao.emManutencao
     if (!manutencaoAnterior) {
         req.app.locals.manutencao.emManutencao = true
@@ -328,15 +339,14 @@ const restaurarServidor = async (req, res) => {
     switch (status) {
         case 200:
             req.app.locals.tracking = data.tracking
-            for (let i = 1; i == limite; i++) {
-                rotas.forEach((rota) => {
-                    try {
-                        req.app.locals.map[`R${i}${rota}`] = data.map[`R${i}${rota}`]
-                    } catch (error) {
-                        req.app.locals.map[`R${i}${rota}`] = []
-                    }
-                })
-            }
+            req.app.locals.ranking = data.ranking
+            req.app.locals.banlist = data.banlist
+            req.app.locals.limite = data.limite
+            req.app.locals.rotas = data.rotas
+            req.app.locals.alteracoes = data.alteracoes
+            req.app.locals.reset = data.reset
+            req.app.locals.map = data.map
+            req.app.locals.IPS = data.IPs
             response.status = 200
             response.message = "Backup restaurado com sucesso!"
             response.error = ""
@@ -367,5 +377,6 @@ module.exports = {
     ranking,
     cadastarAvatares,
     sincronizarServidor,
-    restaurarServidor
+    restaurarServidor,
+    alterarChamado
 }

@@ -9,7 +9,7 @@ const RouteTracking = require("./routes/Tracking")
 const RouteConfirmacao = require("./routes/Confirmacao")
 const RouteModoDashboard = require("./routes/ModoDashboad")
 const RouteAdmin = require("./routes/Admin")
-
+const RouteChamado = require("./routes/Chamados")
 //Empacotamento das Rotas para configuração no app.js
 
 const routes = [
@@ -21,7 +21,8 @@ const routes = [
     RouteTracking,
     RouteConfirmacao,
     RouteModoDashboard,
-    RouteAdmin
+    RouteAdmin,
+    RouteChamado
 ]
 
 //Exportação

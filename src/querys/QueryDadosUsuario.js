@@ -6,7 +6,8 @@ const database = require("../db")
 const Usuarios = require("../models/Usuarios")
 const Contas = require("../models/Contas")
 const Saques = require("../models/Saques")
-
+const Historico = require("../models/Historico")
+        
 const QueryDadosUsuario = {
 
     //Consulta que busca o usuário enviado para cadastro.
@@ -49,7 +50,8 @@ const QueryDadosUsuario = {
                 S.pix AS pix,
                 S.banco as banco,
                 S.recebedor as recebedor,
-                U.nome as nome
+                U.nome as nome,
+                U.idUsuario as idUsuario
             FROM saques AS S INNER JOIN usuarios AS U ON U.idUsuario = S.idUsuario
             WHERE U.idUsuario = ${idUsuario}`
         try {
@@ -72,6 +74,7 @@ const QueryDadosUsuario = {
             });
             return data
         } catch (error) {
+            console.log(error)
             throw "Falha na conexão com o banco de dados - Atualizar Saldo!"
         }
     },
@@ -128,6 +131,41 @@ const QueryDadosUsuario = {
             return result
         } catch (error) {
             console.log(error)
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    AtualizarSenha: async (idUsuario, senha) => {
+        try {
+            const data = await Usuarios.update({ senha: senha }, {
+                where: {
+                    idUsuario: idUsuario,
+                },
+            });
+            return data
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    buscarHistorico: async (idUsuario) => {
+        try {
+            const data = Historico.findAll({
+                where: {
+                    idUsuario: idUsuario
+                }
+            })
+            return data
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    inserirHistorico: async (idUsuario, desafio, valor) => {
+        try {
+            return await Historico.create({
+                idUsuario: idUsuario,
+                desafio: desafio,
+                valor: valor
+            })
+        } catch (error) {
             throw "Falha na conexão com o banco de dados!"
         }
     }

@@ -7,6 +7,7 @@ const Usuarios = require("../models/Usuarios")
 const Saques = require("../models/Saques")
 const Rota = require("../models/Rotas")
 const Avatar = require("../models/Avatares")
+const Chamado = require("../models/Chamados")
 //Objeto de consultas
 
 const Query = `SELECT
@@ -20,7 +21,15 @@ S.banco as banco,
 S.recebedor as recebedor,
 U.nome as nome
 FROM saques AS S INNER JOIN usuarios AS U ON U.idUsuario = S.idUsuario`
-
+const sqlChamados = `SELECT 
+c.idChamado as idChamado,
+c.motivo as motivo,
+c.status as status,
+c.idUsuario as idUsuario,
+c.createdAt as createdAt,
+u.avatar as avatar,
+u.nome as nome
+FROM chamados as c INNER JOIN usuarios as u ON c.idUsuario = u.idUsuario`
 const QueryAdmin = {
 
     //Consulta que busca o usuário enviado para login.
@@ -31,6 +40,19 @@ const QueryAdmin = {
                     exclude: [
                         'senha',
                     ]
+                }
+            })
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    atualizarStatusChamado: async (idChamado, status) => {
+        try {
+            return await Chamado.update({
+                status: status
+            }, {
+                where: {
+                    idChamado: idChamado
                 }
             })
         } catch (error) {
@@ -67,6 +89,7 @@ const QueryAdmin = {
                 }
             })
         } catch (error) {
+            console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
     },
@@ -101,9 +124,9 @@ const QueryAdmin = {
     },
     BuscarTodasRotas: async (type = "admin") => {
         try {
-            if(type == "admin"){
+            if (type == "admin") {
                 return await Rota.findAll()
-            }else{
+            } else {
                 return await Rota.findAll({
                     attributes: {
                         exclude: [
@@ -129,7 +152,15 @@ const QueryAdmin = {
             console.log(error)
             throw "Falha na conexão com o banco de dados!"
         }
-    }
+    },
+    buscarChamados: async () => {
+        try {
+            return await database.query(sqlChamados)
+        } catch (error) {
+            console.log(error)
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
 }
 
 

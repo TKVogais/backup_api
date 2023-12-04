@@ -19,6 +19,8 @@ const path = require('path')
 
 
 const { AnalysisServer } = require("./src/utils/analirics");
+const { loadBackup } = require("./src/utils/backup");
+const initializeServer = require("./src/utils/initialize-server");
 
 
 
@@ -47,16 +49,25 @@ app.locals.rotas = []
 app.locals.map = {}
 app.locals.ranking = []
 app.locals.banlist = []
+app.locals.alteracoes = []
+app.locals.IPs = []
+app.locals.reset = false
+app.locals.reload = false
 app.locals.manutencao = {
     emManutencao: true,
     motivo: "Inicialização do Servidor",
     tempo: "1 ~ 5 Minutos"
 }
-
+const loadServer = async () => {
+    if (!app.locals.reload) {
+        await initializeServer(app)
+    }
+}
+loadServer()
 
 setInterval(async () => {
     await AnalysisServer(app)
-}, 2000)
+}, 5000)
 const PORT = process.env.PORT || 4000;
 
 

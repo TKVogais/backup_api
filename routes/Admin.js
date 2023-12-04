@@ -29,6 +29,7 @@ router.post('/admin/manutencao', MiddlewareAdmin, ControllerAdmin.manutencaoPlat
 router.post('/admin/avatar', MiddlewareAdmin, ControllerAdmin.cadastarAvatares)
 router.get('/admin/sincronizar-servidor', MiddlewareAdmin, ControllerAdmin.sincronizarServidor)
 router.get('/admin/backup', MiddlewareAdmin, ControllerAdmin.restaurarServidor)
+router.post('/admin/alterar-status-chamado', MiddlewareAdmin, ControllerAdmin.alterarChamado)
 
 //Exportação das Rotas
 module.exports = router

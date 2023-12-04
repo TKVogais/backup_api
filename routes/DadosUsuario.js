@@ -7,11 +7,14 @@ const router = express.Router();
 
 const ControllerDadosUsuario = require('../src/controlers/ControllerDadosUsuario')
 const ControllerAutenticacao = require("../src/controlers/ControllerAutenticacao")
+const ControllerAdmin = require("../src/controlers/ControllerAdm")
 
 //Rotas
 
 router.post('/dados-usuario', ControllerAutenticacao.VerificarToken, ControllerDadosUsuario.DadosDashboard)
 router.post('/atualizar-perfil', ControllerAutenticacao.VerificarToken, ControllerDadosUsuario.AtualizarPerfil)
-
+router.post('/solicitar-token', ControllerDadosUsuario.gerarTokenTrocaSenha)
+router.post('/trocar-senha', ControllerDadosUsuario.alterarSenhaUsuario)
+router.post('/alterar-status-saque', ControllerAutenticacao.VerificarToken, ControllerAdmin.alterarStatusSaque)
 //Exportação das Rotas
 module.exports = router 

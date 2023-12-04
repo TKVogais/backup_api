@@ -33,7 +33,8 @@ const SolicitacaoSaque = async (req, res) => {
             return res.json({
                 status: 200,
                 message: `Seu saque foi solicitado com sucesso!`,
-                view: "green"
+                view: "green",
+                idSaque: response.idSaque
             })
         } else {
             return res.json({

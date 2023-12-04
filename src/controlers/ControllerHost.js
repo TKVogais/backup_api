@@ -1,5 +1,9 @@
+//Configuração das Variáveis de Ambiente.
+
+require('dotenv').config()
+
 const VerificarHost = async (req, res, next) => {
-    const mode = "nuvem-dev"
+    const mode = process.env.NODE_MODE_HOST
     let host = ""
 
     switch (mode) {

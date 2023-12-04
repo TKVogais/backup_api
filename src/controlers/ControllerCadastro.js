@@ -1,5 +1,6 @@
 //Importação das consultas no banco de dados.
 
+const enviarEmail = require("../utils/send-mail")
 const QueryCadastro = require("../querys/QueryCadastro")
 
 //Função de cadastro do usuário.
@@ -34,6 +35,10 @@ const CadastroUsuario = async (req, res) => {
         //Inserção do usuário no banco de dados.
         response = await QueryCadastro.CadastroUsuario(usuario, email, senha)
 
+        const sendEmail = await enviarEmail(email, "Cadastro Realizado", "cadastro", {
+            usuario: usuario
+        })
+        
         if (response) {
             return res.json({
                 status: 200,

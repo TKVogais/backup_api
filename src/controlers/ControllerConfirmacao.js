@@ -8,7 +8,8 @@ const ConfirmarTarefa = async (req, res) => {
 
     const rota = req.headers.referer.split('/confirmacao/')[1]
 
-
+    let userRanked = false
+    let rankindIndex = 0
     let tracking = req.app.locals.tracking
     let ranking = req.app.locals.ranking
     let token = req.body.token
@@ -45,10 +46,30 @@ const ConfirmarTarefa = async (req, res) => {
             case "medio": saldo = 0.010; break;
             case "dificil": saldo = 0.019; break;
         }
-        ranking[location].valor += saldo
-        ranking[location].desafios += 1
+        ranking.map((user, index) => {
+            if (user.idUsuario == usuario.idUsuario) {
+                userRanked = true
+                rankindIndex = index
+                return
+            }
+        })
         const [response] = await QueryDadosUsuario.AtualizarSaldo(usuario.idUsuario, saldo, "mais", true)
+        await QueryDadosUsuario.inserirHistorico(usuario.idUsuario, usuario.ultimaDificuldade, saldo)
         if (response[1] === 1) {
+            if (userRanked) {
+                console.log(usuario)
+                req.app.locals.ranking[rankindIndex].valor += saldo
+                req.app.locals.ranking[rankindIndex].desafios += 1
+                req.app.locals.ranking[rankindIndex].avatar = usuario.avatar
+            } else {
+                req.app.locals.ranking.push({
+                    valor: saldo,
+                    usuario: usuario.usuario,
+                    desafios: 1,
+                    avatar: usuario.avatar,
+                    idUsuario: usuario.idUsuario
+                })
+            }
             res.json({
                 status: 200,
                 message: "Tarefa Confirmada!"

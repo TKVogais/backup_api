@@ -3,7 +3,6 @@
 /.pnp
 .pnp.js
 .teste.js
-.env
 /.vscode
 .db_sync.js
 /.teste.js

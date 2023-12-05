@@ -9,5 +9,5 @@
     const Historico = require('./src/models/Historico')
     const db = require('./src/db')
 
-    await db.sync({ force: false })
+    await db.sync({ force: true })
 })()

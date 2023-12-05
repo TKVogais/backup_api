@@ -3,7 +3,7 @@
 require('dotenv').config()
 
 const VerificarHost = async (req, res, next) => {
-    const mode = process.env.NODE_MODE_HOST
+    const mode = "nuvem-dev"
     let host = ""
 
     switch (mode) {

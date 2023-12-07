@@ -57,7 +57,6 @@ const ConfirmarTarefa = async (req, res) => {
         await QueryDadosUsuario.inserirHistorico(usuario.idUsuario, usuario.ultimaDificuldade, saldo)
         if (response[1] === 1) {
             if (userRanked) {
-                console.log(usuario)
                 req.app.locals.ranking[rankindIndex].valor += saldo
                 req.app.locals.ranking[rankindIndex].desafios += 1
                 req.app.locals.ranking[rankindIndex].avatar = usuario.avatar

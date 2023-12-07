@@ -7,7 +7,8 @@ const Usuarios = require("../models/Usuarios")
 const Contas = require("../models/Contas")
 const Saques = require("../models/Saques")
 const Historico = require("../models/Historico")
-        
+const { hash } = require("../utils/criptografia")
+
 const QueryDadosUsuario = {
 
     //Consulta que busca o usuário enviado para cadastro.
@@ -136,7 +137,7 @@ const QueryDadosUsuario = {
     },
     AtualizarSenha: async (idUsuario, senha) => {
         try {
-            const data = await Usuarios.update({ senha: senha }, {
+            const data = await Usuarios.update({ senha: hash(senha) }, {
                 where: {
                     idUsuario: idUsuario,
                 },
@@ -149,6 +150,18 @@ const QueryDadosUsuario = {
     buscarHistorico: async (idUsuario) => {
         try {
             const data = Historico.findAll({
+                where: {
+                    idUsuario: idUsuario
+                }
+            })
+            return data
+        } catch (error) {
+            throw "Falha na conexão com o banco de dados!"
+        }
+    },
+    buscarEmail: async (idUsuario) => {
+        try {
+            const data = Usuarios.findOne({
                 where: {
                     idUsuario: idUsuario
                 }

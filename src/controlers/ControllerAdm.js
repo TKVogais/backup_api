@@ -262,7 +262,6 @@ const cadastarAvatares = async (req, res) => {
     const { idUsuario, avatar } = req.body
     try {
         let response = await InserirAvatar(idUsuario, avatar)
-        console.log(response)
         if (response) {
             return res.json({
                 status: 200,

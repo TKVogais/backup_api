@@ -1,8 +1,10 @@
 const QuerySaque = require("../querys/QuerySaques")
 const QueryDadosUsuario = require("../querys/QueryDadosUsuario")
+const enviarEmail = require("../utils/send-mail")
 
 const SolicitacaoSaque = async (req, res) => {
     const { idUsuario, valor, saldoClient, pix, recebedor, banco } = req.body
+    const data = new Date()
     let response
 
     try {
@@ -30,6 +32,16 @@ const SolicitacaoSaque = async (req, res) => {
         response = await QuerySaque.CadastroSaque(idUsuario, valor, banco, pix, recebedor)
 
         if (response) {
+            try {
+                const dataUser = await QueryDadosUsuario.buscarEmail(idUsuario)
+                const sendEmail = await enviarEmail(dataUser.email, "Saque Solicitado!", "saque-solicitado", {
+                    usuario: dataUser.nome,
+                    valor: valor,
+                    data: data.toLocaleDateString()
+                })
+            } catch (error) {
+
+            }
             return res.json({
                 status: 200,
                 message: `Seu saque foi solicitado com sucesso!`,

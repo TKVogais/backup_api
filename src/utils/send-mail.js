@@ -116,8 +116,11 @@ const renderHTML = (mode, dados) => {
         case "saque-solicitado":
             html = initHTMLSaque(dados)
             break;
-        case "saque-status":
-            html = initHTMLStatus(dados)
+        case "saque-recusado":
+            html = initHTMLSaqueRecusado(dados)
+            break;
+        case "saque-pago":
+            html = initHTMLSaqueRecusado(dados)
             break;
         case "token-troca-senha":
             html = initHTMLTrocaSenha(dados)
@@ -148,7 +151,6 @@ const enviarEmail = async (destinatario, titulo, mode, dados) => {
             return resolve(res)
         }).catch(error => {
             smtp.close()
-            console.log(error)
             return reject(error)
         })
     })

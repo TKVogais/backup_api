@@ -7,6 +7,7 @@ const QueryCadastro = require("../querys/QueryCadastro")
 
 const CadastroUsuario = async (req, res) => {
     const { usuario, senha, email } = req.body
+
     let response
 
     try {
@@ -38,7 +39,7 @@ const CadastroUsuario = async (req, res) => {
         const sendEmail = await enviarEmail(email, "Cadastro Realizado", "cadastro", {
             usuario: usuario
         })
-        
+
         if (response) {
             return res.json({
                 status: 200,

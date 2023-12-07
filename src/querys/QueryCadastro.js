@@ -35,7 +35,7 @@ const QueryCadastro = {
         try {
             return await Usuarios.create({
                 nome: usuario,
-                senha: hash(senha),
+                senha: await hash(senha),
                 email: email,
                 avatar: "/pessoa1.png"
             })

@@ -137,7 +137,7 @@ const QueryDadosUsuario = {
     },
     AtualizarSenha: async (idUsuario, senha) => {
         try {
-            const data = await Usuarios.update({ senha: hash(senha) }, {
+            const data = await Usuarios.update({ senha: await hash(senha) }, {
                 where: {
                     idUsuario: idUsuario,
                 },

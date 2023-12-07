@@ -1,0 +1,17 @@
+{
+  "tracking": [],
+  "limite": 0,
+  "IPs": [],
+  "rotas": [],
+  "map": {},
+  "ranking": [],
+  "banlist": [],
+  "alteracoes": [],
+  "reset": false,
+  "reload": true,
+  "manutencao": {
+    "emManutencao": false,
+    "motivo": "",
+    "tempo": ""
+  }
+}

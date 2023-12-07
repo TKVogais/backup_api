@@ -3,14 +3,12 @@ const geradorTokenConfirmacao = require("../utils/stringAleatoria")
 
 const Redirecionamento = async (req, res) => {
     if (req.app.locals.rotas.length > 0) {
-        const IPs = req.app.locals.IPs
         const idUsuario = req.body.idUsuario
         const avatar = req.body.avatar
         const dificuldade = req.body.dificuldade
         const nome = req.body.usuario
         const limite = req.app.locals.limite
         const rotas = req.app.locals.rotas
-        const IP = req.body.IP
         let valor = 0
 
         switch (dificuldade) {
@@ -41,17 +39,6 @@ const Redirecionamento = async (req, res) => {
             tokenCriado = false
         }
         if (!usuario) {
-            IPs.forEach((ip) => {
-                if (ip == IP) {
-                    return res.json({
-                        status: 603,
-                        VPN: true,
-                        message: "Esse IP já está em uso!",
-                        limite: false,
-                        semRota: false,
-                    })
-                }
-            })
             req.app.locals.tracking.push({
                 idUsuario: idUsuario,
                 usuario: nome,
@@ -60,22 +47,8 @@ const Redirecionamento = async (req, res) => {
                 token: token,
                 ultimaDificuldade: "",
                 avatar: avatar,
-                IP: IP
             })
-            req.app.locals.IPs.push(IP)
             location = req.app.locals.tracking.length - 1
-        } else {
-            if (usuario.IP != IP && usuario.IP != "") {
-                return res.json({
-                    status: 603,
-                    VPN: true,
-                    message: "IP diferente, mudança de dispositivo ou uso de VPN",
-                    limite: false,
-                    semRota: false,
-                })
-            } else {
-                req.app.locals.tracking[location].IP = IP
-            }
         }
         let nRota = req.app.locals.tracking[location].rota - 1
         let clicks = req.app.locals.tracking[location].clicks

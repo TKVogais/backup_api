@@ -20,40 +20,40 @@ const Rota = database.define('rotas', {
         allowNull: false
     },
     facil1: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     medio1: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     dificil1: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     facil2: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     medio2: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     dificil2: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     }
     ,
     facil3: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     medio3: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     },
     dificil3: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(150),
         defaultvalue: ""
     }
 })

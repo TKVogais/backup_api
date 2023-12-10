@@ -3,7 +3,7 @@ const geradorTokenConfirmacao = require("../utils/stringAleatoria")
 
 const Redirecionamento = async (req, res) => {
 
-    console.log(req.connection.remoteAdress)
+    console.log(req.connection.remoteAddress)
 
     if (req.app.locals.rotas.length > 0) {
         const idUsuario = req.body.idUsuario

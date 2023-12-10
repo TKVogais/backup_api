@@ -2,11 +2,10 @@ const geradorTokenConfirmacao = require("../utils/stringAleatoria")
 
 
 const Redirecionamento = async (req, res) => {
-
-    console.log(req.connection.remoteAddress)
-
     if (req.app.locals.rotas.length > 0) {
+        const IPs = req.app.locals.IPs
         const idUsuario = req.body.idUsuario
+        const IP = req.body.IP
         const avatar = req.body.avatar
         const dificuldade = req.body.dificuldade
         const nome = req.body.usuario
@@ -42,6 +41,17 @@ const Redirecionamento = async (req, res) => {
             tokenCriado = false
         }
         if (!usuario) {
+            IPs.forEach((usuario) => {
+                if (usuario.IP == IP && usuario.idUsuario != idUsuario) {
+                    return res.json({
+                        status: 603,
+                        VPN: true,
+                        message: "Esse IP já está em uso!",
+                        limite: false,
+                        semRota: false,
+                    })
+                }
+            })
             req.app.locals.tracking.push({
                 idUsuario: idUsuario,
                 usuario: nome,
@@ -50,8 +60,26 @@ const Redirecionamento = async (req, res) => {
                 token: token,
                 ultimaDificuldade: "",
                 avatar: avatar,
+                IP: IP
+            })
+            req.app.locals.IPs.push({
+                idUsuario: idUsuario,
+                IP: IP
             })
             location = req.app.locals.tracking.length - 1
+        } else {
+            let User = req.app.locals.tracking[location]
+            if (User.IP != IP && User.IP != "") {
+                return res.json({
+                    status: 603,
+                    VPN: true,
+                    message: "IP diferente, mudança de dispositivo ou uso de VPN",
+                    limite: false,
+                    semRota: false,
+                })
+            } else {
+                req.app.locals.tracking[location].IP = IP
+            }
         }
         let nRota = req.app.locals.tracking[location].rota - 1
         let clicks = req.app.locals.tracking[location].clicks

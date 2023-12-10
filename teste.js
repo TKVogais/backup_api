@@ -1,5 +1,47 @@
 // const nodemailer = require("nodemailer")
 
+const { hash } = require("./src/utils/criptografia")
+
+const senhas = [
+    "1234567890",
+    "12345678901",
+    "123456789012",
+    "1234567890123",
+    "12345678901234",
+    "123456789012345",
+    "1234567890123456",
+    "12345678901234567",
+    "123456789012345678",
+    "1234567890123456789",
+    "12345678901234567890",
+    "123456789012345678901",
+    "1234567890123456789012",
+    "12345678901234567890123",
+    "123456789012345678901234",
+    "1234567890123456789012345"
+]
+
+senhas.forEach(async (senha) => {
+    let criptografia
+    console.log("======================")
+    console.log(`Senha: ${senha} - Tamanho da senha: ${senha.length}`)
+    criptografia = await hash(senha)
+    console.log(`Hash: ${criptografia} - Tamanho da hash: ${criptografia.length}`)
+})
+console.log("======================")
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const smtp = nodemailer.createTransport({
 //     host: "smtp.hostinger.com",
 //     port: 465,
@@ -128,10 +170,9 @@
 //     })
 // }
 
-const object = {rota1: "", rota2: ""}
+// const object = {rota1: "", rota2: ""}
 
-console.log(Object.keys(object))
-
+// console.log(Object.keys(object))
 
 
 

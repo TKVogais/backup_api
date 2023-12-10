@@ -52,7 +52,16 @@ const Redirecionamento = async (req, res) => {
         }
         let nRota = req.app.locals.tracking[location].rota - 1
         let clicks = req.app.locals.tracking[location].clicks
-
+    
+        if (nRota + 1 > limite) {
+            return res.json({
+                status: 200,
+                semRota: false,
+                limite: true,
+                VPN: false,
+                message: "Você atingiu o limite diário de desafio!"
+            })
+        }
         if (clicks + 1 > 3) {
             req.app.locals.tracking[location].rota += 1
             req.app.locals.tracking[location].clicks = 0

@@ -12,7 +12,7 @@ const AnalysisServer = async (app) => {
     if (horas === "21:00" && !app.locals.reset) {
         const keys = Object.keys(app.locals.map)
 
-        let RankingPremiado = ranking.slice(0,
+        let RankingPremiado = app.locals.ranking.slice(0,
             app.locals.ranking.length > 5
                 ? 5
                 : app.locals.ranking.length

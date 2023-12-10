@@ -2,6 +2,9 @@ const geradorTokenConfirmacao = require("../utils/stringAleatoria")
 
 
 const Redirecionamento = async (req, res) => {
+
+    console.log(req.connection.remoteAdress)
+
     if (req.app.locals.rotas.length > 0) {
         const idUsuario = req.body.idUsuario
         const avatar = req.body.avatar
@@ -52,7 +55,7 @@ const Redirecionamento = async (req, res) => {
         }
         let nRota = req.app.locals.tracking[location].rota - 1
         let clicks = req.app.locals.tracking[location].clicks
-    
+
         if (nRota + 1 > limite) {
             return res.json({
                 status: 200,

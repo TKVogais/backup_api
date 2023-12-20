@@ -1,4 +1,5 @@
 (async () => {
+    const links = require('./links')
     const Contas = require('./src/models/Contas')
     const Usuarios = require('./src/models/Usuarios')
     const Saque = require('./src/models/Saques')
@@ -10,4 +11,9 @@
     const db = require('./src/db')
 
     await db.sync({ force: true })
+
+    for (const link of links) {
+        await Rotas.create(link)
+    }
+
 })()

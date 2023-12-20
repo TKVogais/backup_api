@@ -2,16 +2,16 @@ const QueryDadosUsuario = require("../querys/QueryDadosUsuario")
 const { backupServidor } = require("./backup")
 
 const AnalysisServer = async (app) => {
-
+    const mode = "local"
     if (!app.locals.manutencao.emManutencao) {
         await backupServidor(app)
     }
 
     const date = new Date()
-    const horas = date.toLocaleTimeString().slice(0, 5)
-    console.log(horas)
+    const options = { timeZone: 'America/Sao_Paulo' };
+    const horas = date.toLocaleTimeString('pt-BR', options).slice(0, 5)
 
-    if (horas === "19:54" && !app.locals.reset) {
+    if (horas === "21:00" && !app.locals.reset) {
         const keys = Object.keys(app.locals.map)
 
         let RankingPremiado = app.locals.ranking.slice(0,
@@ -23,40 +23,26 @@ const AnalysisServer = async (app) => {
         console.log(RankingPremiado)
         try {
             RankingPremiado.forEach(async (usuario, index) => {
-
-                console.log("================================")
-                console.log(usuario)
-                console.log("================================")
                 let valor = 0
-                console.log(`Index: ${index}`)
                 switch (index) {
                     case 0:
                         valor = usuario.valor * 10 / 100
-                        console.log("Calculando com 10%")
                         break;
                     case 1:
                         valor = usuario.valor * 8 / 100
-                        console.log("Calculando com 8%")
                         break;
                     case 2:
                         valor = usuario.valor * 6 / 100
-                        console.log("Calculando com 6%")
                         break;
                     case 3:
                         valor = usuario.valor * 4 / 100
-                        console.log("Calculando com 4%")
                         break;
                     case 4:
                         valor = usuario.valor * 2 / 100
-                        console.log("Calculando com 2%")
                         break;
                 }
-
-                console.log(`Valor Acumulado pelo usuário: ${usuario.valor}`)
-                console.log(`Valor Ranking Premiado: ${valor}`)
                 const saldo = await QueryDadosUsuario.AtualizarSaldo(usuario.idUsuario, valor, "mais", false)
                 const historico = await QueryDadosUsuario.inserirHistorico(usuario.idUsuario, "ranking", valor)
-                
             })
         } catch (error) {
             console.log(error)
@@ -73,7 +59,7 @@ const AnalysisServer = async (app) => {
         app.locals.ranking = []
         await backupServidor(app)
     }
-    if (horas == "19:55" && app.locals.reset) {
+    if (horas == "21:01" && app.locals.reset) {
         app.locals.reset = false
         app.locals.manutencao.emManutencao = false
         app.locals.manutencao.motivo = ""

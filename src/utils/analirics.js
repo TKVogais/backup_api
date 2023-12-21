@@ -2,7 +2,7 @@ const QueryDadosUsuario = require("../querys/QueryDadosUsuario")
 const { backupServidor } = require("./backup")
 
 const AnalysisServer = async (app) => {
-    const mode = "local"
+
     if (!app.locals.manutencao.emManutencao) {
         await backupServidor(app)
     }
@@ -19,8 +19,6 @@ const AnalysisServer = async (app) => {
                 ? 5
                 : app.locals.ranking.length
         )
-
-        console.log(RankingPremiado)
         try {
             RankingPremiado.forEach(async (usuario, index) => {
                 let valor = 0

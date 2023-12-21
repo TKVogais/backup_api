@@ -3,7 +3,7 @@
 require('dotenv').config()
 
 const VerificarHost = async (req, res, next) => {
-    const mode = "local "
+    const mode = "nuvem-prod"
     let host = ""
 
     switch (mode) {
@@ -19,7 +19,6 @@ const VerificarHost = async (req, res, next) => {
     }
     try {
         const referer = req.headers.referer
-        console.log(referer)
         if (referer.includes(host)) {
             next()
         } else {

@@ -12,8 +12,8 @@
 
     await db.sync({ force: true })
 
-    for (const link of links) {
-        await Rotas.create(link)
-    }
+    // for (const link of links) {
+    //     await Rotas.create(link)
+    // }
 
 })()

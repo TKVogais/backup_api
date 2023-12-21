@@ -1,10 +1,60 @@
 {
-  "tracking": [],
-  "limite": 0,
-  "IPs": [],
-  "rotas": [],
-  "map": {},
-  "ranking": [],
+  "tracking": [
+    {
+      "idUsuario": 1,
+      "usuario": "gabriel_vogais",
+      "rota": 1,
+      "clicks": 2,
+      "token": "",
+      "ultimaDificuldade": "dificil",
+      "avatar": "/pessoa1.png",
+      "IP": "45.174.82.244"
+    }
+  ],
+  "limite": 1,
+  "IPs": [
+    {
+      "idUsuario": 1,
+      "IP": "45.174.82.244"
+    }
+  ],
+  "rotas": [
+    {
+      "facil1": "http://localhost:4000/api/confirmacao/facil1",
+      "medio1": "http://localhost:4000/api/confirmacao/medio1",
+      "dificil1": "http://localhost:4000/api/confirmacao/dificil1",
+      "facil2": "http://localhost:4000/api/confirmacao/facil2",
+      "medio2": "http://localhost:4000/api/confirmacao/medio2",
+      "dificil2": "http://localhost:4000/api/confirmacao/dificil2",
+      "facil3": "http://localhost:4000/api/confirmacao/facil3",
+      "medio3": "http://localhost:4000/api/confirmacao/medio3",
+      "dificil3": "http://localhost:4000/api/confirmacao/dificil3"
+    }
+  ],
+  "map": {
+    "R1facil1": [
+      1
+    ],
+    "R1medio1": [],
+    "R1dificil1": [],
+    "R1facil2": [],
+    "R1medio2": [],
+    "R1dificil2": [
+      1
+    ],
+    "R1facil3": [],
+    "R1medio3": [],
+    "R1dificil3": []
+  },
+  "ranking": [
+    {
+      "valor": 0.027,
+      "usuario": "gabriel_vogais",
+      "desafios": 2,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 1
+    }
+  ],
   "banlist": [],
   "alteracoes": [],
   "reset": false,

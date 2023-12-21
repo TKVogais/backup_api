@@ -18,7 +18,7 @@ const tarefa_recusada = `
 </div>`
 
 btn_confirmar.addEventListener("click", async () => {
-    const mode = "nuvem"
+    const mode = "local"
     const url = `${mode == "nuvem" ? "https://encanto-service.online/" : "http://localhost:4000/"}api/confirmar-tarefa`
     const response = await axios.post(url, {
         token: input.value

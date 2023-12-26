@@ -19,10 +19,10 @@ const { loadBackup } = require("../utils/backup");
 
 const listarDadosAdmin = async (req, res) => {
     let ranking = req.app.locals.ranking
-    const { id } = req.body
+    const { id, limit } = req.body
     ranking.sort((a, b) => b.valor - a.valor)
     const responseRotas = await BuscarTodasRotas()
-    const responseUsuarios = await ListarUsuarios()
+    const responseUsuarios = await ListarUsuarios(limit)
     const responseRanking = ranking
     const responseTracking = req.app.locals.tracking
     const responseMap = req.app.locals.map

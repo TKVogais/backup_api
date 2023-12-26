@@ -33,15 +33,26 @@ FROM chamados as c INNER JOIN usuarios as u ON c.idUsuario = u.idUsuario`
 const QueryAdmin = {
 
     //Consulta que busca o usuário enviado para login.
-    ListarUsuarios: async () => {
+    ListarUsuarios: async (limit) => {
         try {
-            return await Usuarios.findAll({
-                attributes: {
-                    exclude: [
-                        'senha',
-                    ]
-                }
-            })
+            if (limit) {
+                return await Usuarios.findAll({
+                    limit: 100,
+                    attributes: {
+                        exclude: [
+                            'senha',
+                        ]
+                    }
+                })
+            } else {
+                return await Usuarios.findAll({
+                    attributes: {
+                        exclude: [
+                            'senha',
+                        ]
+                    }
+                })
+            }
         } catch (error) {
             throw "Falha na conexão com o banco de dados!"
         }

@@ -7,9 +7,7 @@ const Login = async (req, res) => {
     let response
     try {
         //Consulta no banco de dados se o usuário está correto.
-        console.log(req.body)
         response = await QueryLogin.BuscarUsuario(usuario)
-        console.log(response)
         //Verificar se foi retornado um objeto:
         //Se for um objeto (true), segue a execução, caso (false), retorna erro
         if (!response) {

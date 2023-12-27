@@ -25,6 +25,7 @@
     "express": "^4.18.2",
     "instagram-node-api": "^1.6.0",
     "instagram-web-api": "^2.2.2",
+    "ip": "^1.1.8",
     "json-web-token": "^3.2.0",
     "jsonwebtoken": "^8.5.1",
     "lowdb": "^1.0.0",

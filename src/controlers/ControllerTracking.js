@@ -1,7 +1,9 @@
 const geradorTokenConfirmacao = require("../utils/stringAleatoria")
-
+const IPAdress = require('ip')
 
 const Redirecionamento = async (req, res) => {
+    const ipUsuario = IPAdress.address()
+
     if (req.app.locals.rotas.length > 0) {
         const IPs = req.app.locals.IPs
         const idUsuario = req.body.idUsuario
@@ -12,7 +14,7 @@ const Redirecionamento = async (req, res) => {
         const limite = req.app.locals.limite
         const rotas = req.app.locals.rotas
         let valor = 0
-
+        console.log(`Usuário: ${nome} - IP: ${ipUsuario}`)
         switch (dificuldade) {
             case "facil": valor = 0.008; break;
             case "medio": valor = 0.010; break;

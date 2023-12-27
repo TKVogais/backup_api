@@ -37,7 +37,7 @@ const Login = async (req, res) => {
         if (response) {
             return res.json({
                 status: 200,
-                view: "green    ",
+                view: "green",
                 message: `Login realizado com sucesso`,
                 token: await gerarToken(id, tipoUsuario),
                 idUsuario: id,

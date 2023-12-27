@@ -1,8 +1,14 @@
 const geradorTokenConfirmacao = require("../utils/stringAleatoria")
-const IPAdress = require('ip')
+
 
 const Redirecionamento = async (req, res) => {
-    const ipUsuario = IPAdress.address()
+    const ipAddress = requestIP.getClientIp(req)
+    const ipSocket = req.socket.remoteAddress
+    const ipHeader = req.header('x-forwarded-for')
+
+    console.log(`Método 1 - IP: ${ipAddress}`)
+    console.log(`Método 2 - IP: ${ipSocket}`)
+    console.log(`Método 3 - IP: ${ipHeader}`)
 
     if (req.app.locals.rotas.length > 0) {
         const IPs = req.app.locals.IPs
@@ -43,17 +49,17 @@ const Redirecionamento = async (req, res) => {
             tokenCriado = false
         }
         if (!usuario) {
-            IPs.forEach((usuario) => {
-                if (usuario.IP == IP && usuario.idUsuario != idUsuario) {
-                    return res.json({
-                        status: 603,
-                        VPN: true,
-                        message: "Esse IP já está em uso!",
-                        limite: false,
-                        semRota: false,
-                    })
-                }
-            })
+            // IPs.forEach((usuario) => {
+            //     if (usuario.IP == IP && usuario.idUsuario != idUsuario) {
+            //         return res.json({
+            //             status: 603,
+            //             VPN: true,
+            //             message: "Esse IP já está em uso!",
+            //             limite: false,
+            //             semRota: false,
+            //         })
+            //     }
+            // })
             req.app.locals.tracking.push({
                 idUsuario: idUsuario,
                 usuario: nome,
@@ -64,24 +70,24 @@ const Redirecionamento = async (req, res) => {
                 avatar: avatar,
                 IP: IP
             })
-            req.app.locals.IPs.push({
-                idUsuario: idUsuario,
-                IP: IP
-            })
+            // req.app.locals.IPs.push({
+            //     idUsuario: idUsuario,
+            //     IP: IP
+            // })
             location = req.app.locals.tracking.length - 1
         } else {
             let User = req.app.locals.tracking[location]
-            if (User.IP != IP && User.IP != "") {
-                return res.json({
-                    status: 603,
-                    VPN: true,
-                    message: "IP diferente, mudança de dispositivo ou uso de VPN",
-                    limite: false,
-                    semRota: false,
-                })
-            } else {
-                req.app.locals.tracking[location].IP = IP
-            }
+            // if (User.IP != IP && User.IP != "") {
+            //     return res.json({
+            //         status: 603,
+            //         VPN: true,
+            //         message: "IP diferente, mudança de dispositivo ou uso de VPN",
+            //         limite: false,
+            //         semRota: false,
+            //     })
+            // } else {
+            //     req.app.locals.tracking[location].IP = IP
+            // }
         }
         let nRota = req.app.locals.tracking[location].rota - 1
         let clicks = req.app.locals.tracking[location].clicks

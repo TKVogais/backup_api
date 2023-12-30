@@ -17,6 +17,14 @@ const Login = async (req, res) => {
                 view: "red",
             })
         }
+        if (response.statusConta === "DESAT.MANUT") {
+            return res.json({
+                status: 402,
+                message: `Plataforma em manutenção, até o fim dela não será possível acessar a plataforma!`,
+                view: "red",
+            })
+        }
+
         if (response.statusConta === "BANIDA") {
             return res.json({
                 status: 402,

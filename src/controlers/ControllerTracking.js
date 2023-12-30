@@ -2,8 +2,7 @@ const geradorTokenConfirmacao = require("../utils/stringAleatoria")
 const requestIP = require('request-ip')
 
 const Redirecionamento = async (req, res) => {
-    const IP = requestIP.getClientIp(req)
-
+    let IP = requestIP.getClientIp(req)
     if (!IP) {
         return res.json({
             status: 603,

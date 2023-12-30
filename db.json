@@ -1,58 +1,221 @@
 {
   "tracking": [
     {
-      "idUsuario": 1,
-      "usuario": "gabriel_vogais",
+      "idUsuario": 619,
+      "usuario": "eduarda2023",
+      "rota": 5,
+      "clicks": 0,
+      "token": "kNBWIKCbV0",
+      "ultimaDificuldade": "facil",
+      "avatar": "/pessoa1.png"
+    },
+    {
+      "idUsuario": 839,
+      "usuario": "jpsants37",
+      "rota": 4,
+      "clicks": 1,
+      "token": "bLDEtfzRcz",
+      "ultimaDificuldade": "medio",
+      "avatar": "/pessoa1.png"
+    },
+    {
+      "idUsuario": 776,
+      "usuario": "ciro",
+      "rota": 2,
+      "clicks": 1,
+      "token": "TZWuSOFaXb",
+      "ultimaDificuldade": "dificil",
+      "avatar": "/pessoa1.png"
+    },
+    {
+      "idUsuario": 414,
+      "usuario": "leni1999",
+      "rota": 1,
+      "clicks": 1,
+      "token": "",
+      "ultimaDificuldade": "medio",
+      "avatar": "/pessoa2.png"
+    },
+    {
+      "idUsuario": 334,
+      "usuario": "franciane",
+      "rota": 2,
+      "clicks": 2,
+      "token": "wplW1waAhq",
+      "ultimaDificuldade": "medio",
+      "avatar": "/pessoa1.png"
+    },
+    {
+      "idUsuario": 1911,
+      "usuario": "yoogns",
+      "rota": 1,
+      "clicks": 1,
+      "token": "K2hqv6AWra",
+      "ultimaDificuldade": "dificil",
+      "avatar": "/pessoa1.png"
+    },
+    {
+      "idUsuario": 179,
+      "usuario": "raiy",
       "rota": 1,
       "clicks": 2,
-      "token": "",
+      "token": "frBV4MyYB7",
       "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.174.82.244"
-    }
-  ],
-  "limite": 1,
-  "IPs": [
+      "avatar": "/pessoa1.png"
+    },
     {
-      "idUsuario": 1,
-      "IP": "45.174.82.244"
+      "idUsuario": 79,
+      "usuario": "tony98",
+      "rota": 1,
+      "clicks": 1,
+      "token": "3X8fLue8MD",
+      "ultimaDificuldade": "dificil",
+      "avatar": "/pessoa1.png"
     }
   ],
-  "rotas": [
-    {
-      "facil1": "http://localhost:4000/api/confirmacao/facil1",
-      "medio1": "http://localhost:4000/api/confirmacao/medio1",
-      "dificil1": "http://localhost:4000/api/confirmacao/dificil1",
-      "facil2": "http://localhost:4000/api/confirmacao/facil2",
-      "medio2": "http://localhost:4000/api/confirmacao/medio2",
-      "dificil2": "http://localhost:4000/api/confirmacao/dificil2",
-      "facil3": "http://localhost:4000/api/confirmacao/facil3",
-      "medio3": "http://localhost:4000/api/confirmacao/medio3",
-      "dificil3": "http://localhost:4000/api/confirmacao/dificil3"
-    }
-  ],
+  "limite": 100,
+  "IPs": [],
+  "rotas": [],
   "map": {
     "R1facil1": [
-      1
+      619,
+      776,
+      334
     ],
-    "R1medio1": [],
-    "R1dificil1": [],
-    "R1facil2": [],
-    "R1medio2": [],
+    "R1medio1": [
+      839,
+      414
+    ],
+    "R1dificil1": [
+      179,
+      1911,
+      79
+    ],
+    "R1facil2": [
+      619,
+      776,
+      334
+    ],
+    "R1medio2": [
+      839
+    ],
     "R1dificil2": [
-      1
+      179
     ],
-    "R1facil3": [],
-    "R1medio3": [],
-    "R1dificil3": []
+    "R1facil3": [
+      619,
+      334
+    ],
+    "R1medio3": [
+      839,
+      776
+    ],
+    "R1dificil3": [],
+    "R2facil1": [
+      619
+    ],
+    "R2medio1": [
+      839,
+      334,
+      776
+    ],
+    "R2dificil1": [],
+    "R2facil2": [
+      619
+    ],
+    "R2medio3": [
+      839
+    ],
+    "R2dificil3": [],
+    "R3facil1": [
+      619
+    ],
+    "R3medio1": [
+      839
+    ],
+    "R3dificil1": [],
+    "R3facil2": [
+      619
+    ],
+    "R3medio2": [
+      839
+    ],
+    "R3dificil2": [],
+    "R3facil3": [
+      619
+    ],
+    "R3facil3": [
+      619
+    ],
+    "R3medio3": [
+      839
+    ],
+    "R3dificil3": [],
+    "R4facil1": [
+      619
+    ],
+    "R4medio1": [
+      839
+    ],
+    "R4dificil1": [],
+    "R4facil2": [
+      619
+    ],
+    "R4medio2": [],
+    "R4dificil2": [],
+    "R4facil3": [
+      619
+    ]
   },
   "ranking": [
     {
-      "valor": 0.027,
-      "usuario": "gabriel_vogais",
+      "valor": 0.09999999999999999,
+      "usuario": "jpsants37",
+      "desafios": 10,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 839
+    },
+    {
+      "valor": 0.09600000000000003,
+      "usuario": "eduarda2023",
+      "desafios": 12,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 619
+    },
+    {
+      "valor": 0.044000000000000004,
+      "usuario": "franciane",
+      "desafios": 5,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 334
+    },
+    {
+      "valor": 0.038,
+      "usuario": "raiy",
       "desafios": 2,
       "avatar": "/pessoa1.png",
-      "idUsuario": 1
+      "idUsuario": 179
+    },
+    {
+      "valor": 0.036000000000000004,
+      "usuario": "ciro",
+      "desafios": 4,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 776
+    },
+    {
+      "valor": 0.019,
+      "usuario": "tony98",
+      "desafios": 1,
+      "avatar": "/pessoa1.png",
+      "idUsuario": 79
+    },
+    {
+      "valor": 0.01,
+      "usuario": "leni1999",
+      "desafios": 1,
+      "avatar": "/pessoa2.png",
+      "idUsuario": 414
     }
   ],
   "banlist": [],

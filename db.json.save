@@ -1,3 +1,4 @@
+
 {
   "tracking": [
     {
@@ -76,9 +77,9 @@
       "idUsuario": 2,
       "usuario": "gabriel_vogais",
       "rota": 1,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "dificil",
+      "clicks": 0,
+      "token": "Xs1QPjBeVP",
+      "ultimaDificuldade": "facil",
       "avatar": "/luffy4.png",
       "IP": "45.174.81.198"
     },
@@ -86,8 +87,18 @@
       "idUsuario": 1180,
       "usuario": "tan",
       "rota": 1,
-      "clicks": 2,
-      "token": "1kOT3iGzql",
+      "clicks": 1,
+      "token": "3bjDRO5ZoW",
+      "ultimaDificuldade": "dificil",
+      "avatar": "/pessoa1.png",
+      "IP": "191.243.124.214"
+    },
+    {
+      "idUsuario": 1815,
+      "usuario": "miguel",
+      "rota": 1,
+      "clicks": 0,
+      "token": "bY9yQsh7G4",
       "ultimaDificuldade": "dificil",
       "avatar": "/pessoa1.png",
       "IP": "191.243.124.214"
@@ -105,9 +116,9 @@
     {
       "idUsuario": 1992,
       "usuario": "wolfinne",
-      "rota": 5,
+      "rota": 3,
       "clicks": 1,
-      "token": "",
+      "token": "z9PzrdsJwQ",
       "ultimaDificuldade": "dificil",
       "avatar": "/pessoa1.png",
       "IP": "177.67.157.23"
@@ -155,9 +166,9 @@
     {
       "idUsuario": 1133,
       "usuario": "terror",
-      "rota": 8,
-      "clicks": 1,
-      "token": "",
+      "rota": 4,
+      "clicks": 2,
+      "token": "T1tVHfFttC",
       "ultimaDificuldade": "dificil",
       "avatar": "/pessoa1.png",
       "IP": "168.228.179.44"
@@ -166,7 +177,7 @@
       "idUsuario": 1998,
       "usuario": "reisa06",
       "rota": 1,
-      "clicks": 3,
+      "clicks": 2,
       "token": "",
       "ultimaDificuldade": "medio",
       "avatar": "/pessoa1.png",
@@ -175,9 +186,9 @@
     {
       "idUsuario": 1829,
       "usuario": "ramonzeira99",
-      "rota": 4,
-      "clicks": 0,
-      "token": "hYd2CDW49J",
+      "rota": 1,
+      "clicks": 1,
+      "token": "",
       "ultimaDificuldade": "facil",
       "avatar": "/pessoa1.png",
       "IP": "177.107.41.98"
@@ -195,9 +206,9 @@
     {
       "idUsuario": 1717,
       "usuario": "dheragon",
-      "rota": 8,
-      "clicks": 2,
-      "token": "HB1mEoxFyN",
+      "rota": 1,
+      "clicks": 1,
+      "token": "Fp4GKsvvti",
       "ultimaDificuldade": "dificil",
       "avatar": "/zoro4.png",
       "IP": "160.20.194.23"
@@ -205,10 +216,10 @@
     {
       "idUsuario": 2001,
       "usuario": "anapaula",
-      "rota": 5,
+      "rota": 1,
       "clicks": 0,
-      "token": "ORSNK23Mgf",
-      "ultimaDificuldade": "facil",
+      "token": "vXtnrN1hkb",
+      "ultimaDificuldade": "medio",
       "avatar": "/pessoa1.png",
       "IP": "177.73.113.243"
     },
@@ -221,765 +232,69 @@
       "ultimaDificuldade": "facil",
       "avatar": "/pessoa1.png",
       "IP": "177.129.184.15"
-    },
-    {
-      "idUsuario": 1815,
-      "usuario": "miguel",
-      "rota": 1,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "63.246.135.125"
-    },
-    {
-      "idUsuario": 883,
-      "usuario": "luciolara",
-      "rota": 1,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "170.80.35.28"
-    },
-    {
-      "idUsuario": 1888,
-      "usuario": "fran130216",
-      "rota": 1,
-      "clicks": 0,
-      "token": "TBOcPukJbg",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.83.232.253"
-    },
-    {
-      "idUsuario": 1733,
-      "usuario": "brunoferrari26",
-      "rota": 1,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "187.102.56.107"
-    },
-    {
-      "idUsuario": 1713,
-      "usuario": "kaua",
-      "rota": 8,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "177.37.151.130"
-    },
-    {
-      "idUsuario": 2003,
-      "usuario": "leonagabrielli",
-      "rota": 7,
-      "clicks": 0,
-      "token": "f4ECjF11ab",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "201.77.103.190"
-    },
-    {
-      "idUsuario": 1436,
-      "usuario": "prettystar",
-      "rota": 13,
-      "clicks": 1,
-      "token": "WsUACirwbw",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "191.36.224.181"
-    },
-    {
-      "idUsuario": 157,
-      "usuario": "paulosilva",
-      "rota": 1,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "191.5.173.72"
-    },
-    {
-      "idUsuario": 2004,
-      "usuario": "guizinlima",
-      "rota": 1,
-      "clicks": 0,
-      "token": "cb9rUgwuGb",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.181.3.38"
-    },
-    {
-      "idUsuario": 2005,
-      "usuario": "crhzzin",
-      "rota": 1,
-      "clicks": 0,
-      "token": "uujJzNjS33",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "170.238.74.215"
-    },
-    {
-      "idUsuario": 1865,
-      "usuario": "wolfin",
-      "rota": 5,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.67.157.23"
-    },
-    {
-      "idUsuario": 66,
-      "usuario": "vinicius730",
-      "rota": 1,
-      "clicks": 0,
-      "token": "HksQCIs6nk",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "181.233.16.237"
-    },
-    {
-      "idUsuario": 1948,
-      "usuario": "camilala",
-      "rota": 1,
-      "clicks": 0,
-      "token": "U9gaIRMlG3",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "181.191.60.215"
-    },
-    {
-      "idUsuario": 1075,
-      "usuario": "guilherme 21",
-      "rota": 1,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "128.201.76.240"
-    },
-    {
-      "idUsuario": 453,
-      "usuario": "maddu",
-      "rota": 8,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "191.220.54.36"
-    },
-    {
-      "idUsuario": 2006,
-      "usuario": "dayansno",
-      "rota": 1,
-      "clicks": 0,
-      "token": "0YEJwOSGcJ",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.30.113.207"
-    },
-    {
-      "idUsuario": 2007,
-      "usuario": "monike",
-      "rota": 2,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.184.58.239"
-    },
-    {
-      "idUsuario": 338,
-      "usuario": "aghata cathania",
-      "rota": 7,
-      "clicks": 1,
-      "token": "iAHwJVJ0Xs",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.105.218.65"
-    },
-    {
-      "idUsuario": 2008,
-      "usuario": "cleuma13",
-      "rota": 1,
-      "clicks": 0,
-      "token": "mV07s9g2MH",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.149.124.29"
-    },
-    {
-      "idUsuario": 2009,
-      "usuario": "taehyungkim",
-      "rota": 1,
-      "clicks": 1,
-      "token": "VjkTa9hduh",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "168.0.192.89"
-    },
-    {
-      "idUsuario": 2010,
-      "usuario": "maxison",
-      "rota": 1,
-      "clicks": 0,
-      "token": "oUgVG0pKWQ",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.4.32.159"
-    },
-    {
-      "idUsuario": 1626,
-      "usuario": "alysson$9270",
-      "rota": 5,
-      "clicks": 1,
-      "token": "90KJSTfWf2",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "179.126.200.130"
-    },
-    {
-      "idUsuario": 774,
-      "usuario": "roohpacheco1298",
-      "rota": 3,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa12.png",
-      "IP": "177.189.86.44"
-    },
-    {
-      "idUsuario": 1096,
-      "usuario": "silvanalb18",
-      "rota": 3,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa8.png",
-      "IP": "191.189.3.7"
-    },
-    {
-      "idUsuario": 1988,
-      "usuario": "fabiane01051983",
-      "rota": 1,
-      "clicks": 1,
-      "token": "4c9JMWFbGJ",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "170.239.27.38"
-    },
-    {
-      "idUsuario": 2011,
-      "usuario": "raqueltaveira",
-      "rota": 1,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.190.209.148"
-    },
-    {
-      "idUsuario": 2012,
-      "usuario": "tatyline",
-      "rota": 4,
-      "clicks": 1,
-      "token": "TOHW5xL3qg",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "187.109.166.253"
-    },
-    {
-      "idUsuario": 2013,
-      "usuario": "fafa63",
-      "rota": 2,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "170.254.37.169"
-    },
-    {
-      "idUsuario": 1704,
-      "usuario": "markjunior37",
-      "rota": 2,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "45.190.252.246"
-    },
-    {
-      "idUsuario": 913,
-      "usuario": "josipezzopani",
-      "rota": 6,
-      "clicks": 1,
-      "token": "O8BJe8PryY",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "187.19.187.223"
-    },
-    {
-      "idUsuario": 1959,
-      "usuario": "mayboaventura",
-      "rota": 3,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "189.68.123.40"
-    },
-    {
-      "idUsuario": 971,
-      "usuario": "agnaldo1000",
-      "rota": 5,
-      "clicks": 1,
-      "token": "jrTjyrPAwm",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "191.183.106.90"
-    },
-    {
-      "idUsuario": 1282,
-      "usuario": "vitor",
-      "rota": 5,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "45.172.37.234"
-    },
-    {
-      "idUsuario": 413,
-      "usuario": "line",
-      "rota": 2,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "177.91.133.198"
-    },
-    {
-      "idUsuario": 150,
-      "usuario": "luciano",
-      "rota": 1,
-      "clicks": 1,
-      "token": "JMjbRhKUWg",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "191.242.63.193"
-    },
-    {
-      "idUsuario": 489,
-      "usuario": "vanessa",
-      "rota": 1,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "177.74.229.166"
-    },
-    {
-      "idUsuario": 2014,
-      "usuario": "aline28",
-      "rota": 1,
-      "clicks": 1,
-      "token": "IE26QJgMtb",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.176.206.2"
-    },
-    {
-      "idUsuario": 240,
-      "usuario": "rubey",
-      "rota": 1,
-      "clicks": 0,
-      "token": "xycWAdlEZk",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "170.82.31.72"
-    },
-    {
-      "idUsuario": 754,
-      "usuario": "jhoo",
-      "rota": 1,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "200.188.218.254"
-    },
-    {
-      "idUsuario": 1214,
-      "usuario": "luciano45",
-      "rota": 1,
-      "clicks": 1,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "170.83.97.179"
-    },
-    {
-      "idUsuario": 2015,
-      "usuario": "liliane",
-      "rota": 1,
-      "clicks": 0,
-      "token": "eCMal2kbVM",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "187.95.161.177"
-    },
-    {
-      "idUsuario": 1240,
-      "usuario": "q9emy1",
-      "rota": 3,
-      "clicks": 1,
-      "token": "xKCYfeDZhM",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "191.7.87.15"
-    },
-    {
-      "idUsuario": 1941,
-      "usuario": "monica costa rodrigu",
-      "rota": 5,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "45.178.78.231"
-    },
-    {
-      "idUsuario": 1900,
-      "usuario": "angelicasil",
-      "rota": 3,
-      "clicks": 0,
-      "token": "jjEBZnfGqd",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "131.196.4.12"
-    },
-    {
-      "idUsuario": 1760,
-      "usuario": "anna",
-      "rota": 7,
-      "clicks": 0,
-      "token": "7JxmhSyK8c",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa8.png",
-      "IP": "191.7.87.15"
-    },
-    {
-      "idUsuario": 1982,
-      "usuario": "jessicasantos",
-      "rota": 1,
-      "clicks": 1,
-      "token": "6JRJx8v1H6",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.7.1.170"
-    },
-    {
-      "idUsuario": 1605,
-      "usuario": "bekajuly",
-      "rota": 13,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "200.124.167.120"
-    },
-    {
-      "idUsuario": 1856,
-      "usuario": "jessica.santos",
-      "rota": 16,
-      "clicks": 2,
-      "token": "xV9qFKgrqA",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa8.png",
-      "IP": "45.7.1.170"
-    },
-    {
-      "idUsuario": 287,
-      "usuario": "jpssants",
-      "rota": 7,
-      "clicks": 3,
-      "token": "",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "45.181.50.36"
-    },
-    {
-      "idUsuario": 2016,
-      "usuario": "brunobraga",
-      "rota": 1,
-      "clicks": 1,
-      "token": "6u1mIuog0i",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "45.183.68.167"
-    },
-    {
-      "idUsuario": 2017,
-      "usuario": "gabrielpm2323",
-      "rota": 1,
-      "clicks": 0,
-      "token": "Uh6SqDPgof",
-      "ultimaDificuldade": "facil",
-      "avatar": "/pessoa1.png",
-      "IP": "186.214.175.250"
-    },
-    {
-      "idUsuario": 2018,
-      "usuario": "vitorsilva3007",
-      "rota": 1,
-      "clicks": 2,
-      "token": "",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa1.png",
-      "IP": "186.26.92.25"
-    },
-    {
-      "idUsuario": 874,
-      "usuario": "santos1998",
-      "rota": 3,
-      "clicks": 0,
-      "token": "MFoyAOViY4",
-      "ultimaDificuldade": "medio",
-      "avatar": "/pessoa1.png",
-      "IP": "45.184.79.226"
-    },
-    {
-      "idUsuario": 1754,
-      "usuario": "icof21",
-      "rota": 1,
-      "clicks": 2,
-      "token": "sREfssnUlg",
-      "ultimaDificuldade": "dificil",
-      "avatar": "/pessoa16.png",
-      "IP": "201.26.152.153"
     }
   ],
   "limite": 100,
   "IPs": [
     {
-      "idUsuario": 1815,
-      "IP": "63.246.135.125"
+      "idUsuario": 2,
+      "IP": "45.174.81.198"
     },
     {
-      "idUsuario": 883,
-      "IP": "170.80.35.28"
+      "idUsuario": 1180,
+      "IP": "191.243.124.214"
     },
     {
-      "idUsuario": 1888,
-      "IP": "177.83.232.253"
+      "idUsuario": 1985,
+      "IP": "179.97.31.80"
     },
     {
-      "idUsuario": 1733,
-      "IP": "187.102.56.107"
-    },
-    {
-      "idUsuario": 1713,
-      "IP": "177.37.151.130"
-    },
-    {
-      "idUsuario": 2003,
-      "IP": "201.77.103.190"
-    },
-    {
-      "idUsuario": 1436,
-      "IP": "191.36.224.181"
-    },
-    {
-      "idUsuario": 157,
-      "IP": "191.5.173.72"
-    },
-    {
-      "idUsuario": 2004,
-      "IP": "177.181.3.38"
-    },
-    {
-      "idUsuario": 2005,
-      "IP": "170.238.74.215"
-    },
-    {
-      "idUsuario": 1865,
+      "idUsuario": 1992,
       "IP": "177.67.157.23"
     },
     {
-      "idUsuario": 66,
-      "IP": "181.233.16.237"
+      "idUsuario": 1993,
+      "IP": "181.222.4.241"
     },
     {
-      "idUsuario": 1948,
-      "IP": "181.191.60.215"
+      "idUsuario": 1995,
+      "IP": "45.5.134.155"
     },
     {
-      "idUsuario": 1075,
-      "IP": "128.201.76.240"
+      "idUsuario": 1996,
+      "IP": "38.132.120.254"
     },
     {
-      "idUsuario": 453,
-      "IP": "191.220.54.36"
+      "idUsuario": 1997,
+      "IP": "45.177.77.126"
     },
     {
-      "idUsuario": 2006,
-      "IP": "177.30.113.207"
+      "idUsuario": 1133,
+      "IP": "168.228.179.44"
     },
     {
-      "idUsuario": 2007,
-      "IP": "45.184.58.239"
+      "idUsuario": 1998,
+      "IP": "200.95.221.205"
     },
     {
-      "idUsuario": 338,
-      "IP": "177.105.218.65"
+      "idUsuario": 1829,
+      "IP": "177.107.41.98"
     },
     {
-      "idUsuario": 2008,
-      "IP": "177.149.124.29"
+      "idUsuario": 2000,
+      "IP": "190.115.99.54"
     },
     {
-      "idUsuario": 2009,
-      "IP": "168.0.192.89"
+      "idUsuario": 1717,
+      "IP": "160.20.194.23"
     },
     {
-      "idUsuario": 2010,
-      "IP": "45.4.32.159"
+      "idUsuario": 2001,
+      "IP": "177.73.113.243"
     },
     {
-      "idUsuario": 1626,
-      "IP": "179.126.200.130"
-    },
-    {
-      "idUsuario": 774,
-      "IP": "177.189.86.44"
-    },
-    {
-      "idUsuario": 1096,
-      "IP": "191.189.3.7"
-    },
-    {
-      "idUsuario": 1988,
-      "IP": "170.239.27.38"
-    },
-    {
-      "idUsuario": 2011,
-      "IP": "177.190.209.148"
-    },
-    {
-      "idUsuario": 2012,
-      "IP": "187.109.166.253"
-    },
-    {
-      "idUsuario": 2013,
-      "IP": "170.254.37.169"
-    },
-    {
-      "idUsuario": 1704,
-      "IP": "45.190.252.246"
-    },
-    {
-      "idUsuario": 913,
-      "IP": "187.19.187.223"
-    },
-    {
-      "idUsuario": 1959,
-      "IP": "189.68.123.40"
-    },
-    {
-      "idUsuario": 971,
-      "IP": "191.183.106.90"
-    },
-    {
-      "idUsuario": 1282,
-      "IP": "45.172.37.234"
-    },
-    {
-      "idUsuario": 413,
-      "IP": "177.91.133.198"
-    },
-    {
-      "idUsuario": 150,
-      "IP": "191.242.63.193"
-    },
-    {
-      "idUsuario": 489,
-      "IP": "177.74.229.166"
-    },
-    {
-      "idUsuario": 2014,
-      "IP": "45.176.206.2"
-    },
-    {
-      "idUsuario": 240,
-      "IP": "170.82.31.72"
-    },
-    {
-      "idUsuario": 754,
-      "IP": "200.188.218.254"
-    },
-    {
-      "idUsuario": 1214,
-      "IP": "170.83.97.179"
-    },
-    {
-      "idUsuario": 2015,
-      "IP": "187.95.161.177"
-    },
-    {
-      "idUsuario": 1240,
-      "IP": "191.7.87.15"
-    },
-    {
-      "idUsuario": 1941,
-      "IP": "45.178.78.231"
-    },
-    {
-      "idUsuario": 1900,
-      "IP": "131.196.4.12"
-    },
-    {
-      "idUsuario": 1760,
-      "IP": "191.7.87.15"
-    },
-    {
-      "idUsuario": 1982,
-      "IP": "45.7.1.170"
-    },
-    {
-      "idUsuario": 1605,
-      "IP": "200.124.167.120"
-    },
-    {
-      "idUsuario": 1856,
-      "IP": "45.7.1.170"
-    },
-    {
-      "idUsuario": 287,
-      "IP": "45.181.50.36"
-    },
-    {
-      "idUsuario": 2016,
-      "IP": "45.183.68.167"
-    },
-    {
-      "idUsuario": 2017,
-      "IP": "186.214.175.250"
-    },
-    {
-      "idUsuario": 2018,
-      "IP": "186.26.92.25"
-    },
-    {
-      "idUsuario": 874,
-      "IP": "45.184.79.226"
-    },
-    {
-      "idUsuario": 1754,
-      "IP": "201.26.152.153"
+      "idUsuario": 2002,
+      "IP": "177.129.184.15"
     }
   ],
   "rotas": [
@@ -2091,40 +1406,11 @@
       334,
       1998,
       2000,
-      1829,
-      2001,
-      2003,
-      2007,
-      338,
-      2009,
-      774,
-      1096,
-      1988,
-      2012,
-      913,
-      2014,
-      1959,
-      1941,
-      1900,
-      2016,
-      2018
+      1829
     ],
     "R1medio1": [
       839,
-      414,
-      1436,
-      157,
-      1075,
-      453,
-      1626,
-      2013,
-      1704,
-      1282,
-      413,
-      150,
-      287,
-      1856,
-      874
+      414
     ],
     "R1dificil1": [
       179,
@@ -2134,751 +1420,221 @@
       1992,
       1997,
       1133,
-      1717,
-      1998,
-      1815,
-      883,
-      1713,
-      1733,
-      1865,
-      2011,
-      971,
-      489,
-      1214,
-      1240,
-      1982,
-      1605,
-      2,
-      1760,
-      754,
-      1754
+      1717
     ],
     "R1facil2": [
       619,
       776,
-      334,
-      1829,
-      2003,
-      2001,
-      338,
-      774,
-      2012,
-      913,
-      413,
-      1959,
-      1941,
-      1900,
-      287
+      334
     ],
     "R1medio2": [
       839,
-      1998,
-      453,
-      1075,
-      2007,
-      1626,
-      1096,
-      2013,
-      1704,
-      1282,
-      1856,
-      874
+      1998
     ],
     "R1dificil2": [
       179,
       1992,
       1997,
-      1133,
-      1180,
-      1717,
-      1713,
-      1733,
-      1436,
-      1865,
-      157,
-      2011,
-      971,
-      489,
-      1240,
-      1605,
-      1760,
-      754,
-      2018,
-      1754
+      1133
     ],
     "R1facil3": [
       619,
-      334,
-      1829,
-      2003,
-      2001,
-      338,
-      774,
-      2012,
-      913,
-      413,
-      1959,
-      1900
+      334
     ],
     "R1medio3": [
       839,
-      776,
-      453,
-      1075,
-      1626,
-      2013,
-      1704,
-      1282,
-      1941,
-      287,
-      1856,
-      874
+      776
     ],
     "R1dificil3": [
       1992,
-      1133,
-      1717,
-      1713,
-      1436,
-      1865,
-      2007,
-      1096,
-      2011,
-      971,
-      1240,
-      1605,
-      1760,
-      754
+      1133
     ],
     "R2facil1": [
-      619,
-      1829,
-      2003,
-      2001,
-      338,
-      774,
-      1096,
-      2012,
-      913,
-      1959,
-      1900,
-      1941
+      619
     ],
     "R2medio1": [
       839,
       334,
-      776,
-      453,
-      1626,
-      2013,
-      1704,
-      1282,
-      287,
-      1856,
-      874
+      776
     ],
     "R2dificil1": [
       1992,
-      1133,
-      1717,
-      1713,
-      1436,
-      1865,
-      2007,
-      971,
-      413,
-      1605,
-      1240,
-      1760
+      1133
     ],
     "R2facil2": [
-      619,
-      2003,
-      2001,
-      1829,
-      338,
-      774,
-      913,
-      1900,
-      1941
+      619
     ],
     "R2medio2": [
       839,
-      334,
-      453,
-      1626,
-      2013,
-      2012,
-      1704,
-      1282,
-      413,
-      1959,
-      287,
-      1856,
-      874
+      334
     ],
     "R2dificil2": [
       1992,
-      1133,
-      1717,
-      1713,
-      1436,
-      1865,
-      2007,
-      1096,
-      971,
-      1605,
-      1240,
-      1760
+      1133
     ],
     "R2facil3": [
-      619,
-      2003,
-      2001,
-      1829,
-      338,
-      774,
-      913,
-      1900
+      619
     ],
     "R2medio3": [
-      839,
-      453,
-      1626,
-      2012,
-      1704,
-      1282,
-      413,
-      1959,
-      287,
-      1941,
-      1856,
-      874
+      839
     ],
     "R2dificil3": [
       1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      1096,
-      971,
-      1605,
-      1240,
-      1760
+      1992
     ],
     "R3facil1": [
-      619,
-      2003,
-      2001,
-      1829,
-      338,
-      774,
-      913
+      619
     ],
     "R3medio1": [
-      839,
-      453,
-      1626,
-      2012,
-      1282,
-      1959,
-      287,
-      1941,
-      1856
+      839
     ],
     "R3dificil1": [
       1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      1096,
-      971,
-      1605,
-      1240,
-      1760
+      1992
     ],
     "R3facil2": [
-      619,
-      2003,
-      2001,
-      1829,
-      338,
-      913
+      619
     ],
     "R3medio2": [
-      839,
-      453,
-      1626,
-      2012,
-      1282,
-      1959,
-      287,
-      1941,
-      1856
+      839
     ],
     "R3dificil2": [
-      1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      1096,
-      971,
-      1605,
-      1760
+      1133
     ],
     "R3facil3": [
-      619,
-      2003,
-      2001,
-      1829,
-      338,
-      913,
-      1941
+      619
     ],
     "R3medio3": [
-      839,
-      453,
-      1626,
-      2012,
-      1282,
-      287,
-      1856
+      839
     ],
     "R3dificil3": [
-      1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      1096,
-      971,
-      1959,
-      1605,
-      1760
+      1133
     ],
     "R4facil1": [
-      619,
-      2003,
-      2001,
-      338,
-      913,
-      2012
+      619
     ],
     "R4medio1": [
-      839,
-      453,
-      1626,
-      1282,
-      287,
-      1941,
-      1856
+      839
     ],
     "R4dificil1": [
-      1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      971,
-      1605,
-      1760
+      1133
     ],
     "R4facil2": [
-      619,
-      2003,
-      2001,
-      338,
-      913
+      619
     ],
-    "R4medio2": [
-      453,
-      1626,
-      1282,
-      287,
-      1856,
-      1941
-    ],
+    "R4medio2": [],
     "R4dificil2": [
-      1133,
-      1992,
-      1717,
-      1713,
-      1436,
-      1865,
-      971,
-      1605,
-      1760
+      1133
     ],
     "R4facil3": [
-      619,
-      2003,
-      2001,
-      338,
-      913
+      619
     ],
-    "R4medio3": [
-      1436,
-      453,
-      1626,
-      1282,
-      287,
-      1856,
-      1941
-    ],
-    "R4dificil3": [
-      1133,
-      1992,
-      1717,
-      1713,
-      1865,
-      971,
-      1605,
-      1760
-    ],
-    "R5facil1": [
-      2003,
-      338,
-      913
-    ],
+    "R4medio3": [],
+    "R4dificil3": [],
+    "R5facil1": [],
     "R5medio1": [],
-    "R5dificil1": [
-      1133,
-      1717,
-      1992,
-      1713,
-      1865,
-      1605,
-      1760
-    ],
-    "R5facil2": [
-      2003,
-      453,
-      338,
-      913,
-      287,
-      1856,
-      1941
-    ],
-    "R5medio2": [
-      1436,
-      453,
-      1626,
-      971,
-      1282,
-      287,
-      1856,
-      1941
-    ],
-    "R5dificil2": [
-      1133,
-      1717,
-      1713,
-      1436,
-      1605,
-      1760
-    ],
-    "R5facil3": [
-      2003,
-      453,
-      338,
-      913
-    ],
-    "R5medio3": [
-      287,
-      1856,
-      1941
-    ],
-    "R5dificil3": [
-      1133,
-      1717,
-      1713,
-      1436,
-      1605,
-      1760
-    ],
-    "R6facil1": [
-      2003,
-      453,
-      338,
-      913
-    ],
+    "R5dificil1": [],
+    "R5facil2": [],
+    "R5medio2": [],
+    "R5dificil2": [],
+    "R5facil3": [],
+    "R5medio3": [],
+    "R5dificil3": [],
+    "R6facil1": [],
     "R6medio1": [],
-    "R6dificil1": [
-      1133,
-      1717,
-      1713,
-      1436,
-      1605,
-      1760
-    ],
-    "R6facil2": [
-      2003,
-      453,
-      338,
-      287,
-      1856
-    ],
-    "R6medio2": [
-      1436,
-      287,
-      1856
-    ],
-    "R6dificil2": [
-      1133,
-      1717,
-      1713,
-      1605,
-      1760
-    ],
-    "R6facil3": [
-      2003,
-      338
-    ],
-    "R6medio3": [
-      1436,
-      453,
-      287,
-      1856
-    ],
-    "R6dificil3": [
-      1133,
-      1717,
-      1713,
-      1605,
-      1760
-    ],
-    "R7facil1": [
-      338
-    ],
-    "R7medio1": [
-      1436,
-      453,
-      287,
-      1856
-    ],
-    "R7dificil1": [
-      1133,
-      1717,
-      1713,
-      1605
-    ],
-    "R7facil2": [
-      287
-    ],
-    "R7medio2": [
-      1436,
-      453,
-      287,
-      1856
-    ],
-    "R7dificil2": [
-      1133,
-      1717,
-      1713,
-      1605
-    ],
+    "R6dificil1": [],
+    "R6facil2": [],
+    "R6medio2": [],
+    "R6dificil2": [],
+    "R6facil3": [],
+    "R6medio3": [],
+    "R6dificil3": [],
+    "R7facil1": [],
+    "R7medio1": [],
+    "R7dificil1": [],
+    "R7facil2": [],
+    "R7medio2": [],
+    "R7dificil2": [],
     "R7facil3": [],
-    "R7medio3": [
-      1436,
-      453,
-      1856
-    ],
-    "R7dificil3": [
-      1133,
-      1717,
-      1713,
-      1605
-    ],
+    "R7medio3": [],
+    "R7dificil3": [],
     "R8facil1": [],
-    "R8medio1": [
-      1436,
-      453,
-      1856
-    ],
-    "R8dificil1": [
-      1133,
-      1717,
-      1713,
-      1605
-    ],
+    "R8medio1": [],
+    "R8dificil1": [],
     "R8facil2": [],
-    "R8medio2": [
-      453,
-      1856
-    ],
-    "R8dificil2": [
-      1717,
-      1713,
-      1436,
-      1605
-    ],
+    "R8medio2": [],
+    "R8dificil2": [],
     "R8facil3": [],
-    "R8medio3": [
-      1713,
-      1436,
-      1605,
-      1856
-    ],
+    "R8medio3": [],
     "R8dificil3": [],
     "R9facil1": [],
-    "R9medio1": [
-      1436,
-      1605,
-      1856
-    ],
+    "R9medio1": [],
     "R9dificil1": [],
     "R9facil2": [],
-    "R9medio2": [
-      1436,
-      1605,
-      1856
-    ],
+    "R9medio2": [],
     "R9dificil2": [],
     "R9facil3": [],
-    "R9medio3": [
-      1436,
-      1605,
-      1856
-    ],
+    "R9medio3": [],
     "R9dificil3": [],
     "R10facil1": [],
-    "R10medio1": [
-      1436,
-      1605,
-      1856
-    ],
+    "R10medio1": [],
     "R10dificil1": [],
     "R10facil2": [],
-    "R10medio2": [
-      1436,
-      1605,
-      1856
-    ],
+    "R10medio2": [],
     "R10dificil2": [],
     "R10facil3": [],
-    "R10medio3": [
-      1436,
-      1605,
-      1856
-    ],
+    "R10medio3": [],
     "R10dificil3": [],
     "R11facil1": [],
-    "R11medio1": [
-      1436,
-      1605,
-      1856
-    ],
+    "R11medio1": [],
     "R11dificil1": [],
     "R11facil2": [],
-    "R11medio2": [
-      1436,
-      1605,
-      1856
-    ],
+    "R11medio2": [],
     "R11dificil2": [],
-    "R11facil3": [
-      1605
-    ],
-    "R11medio3": [
-      1436,
-      1856
-    ],
+    "R11facil3": [],
+    "R11medio3": [],
     "R11dificil3": [],
-    "R12facil1": [
-      1605
-    ],
-    "R12medio1": [
-      1436
-    ],
-    "R12dificil1": [
-      1856
-    ],
-    "R12facil2": [
-      1605
-    ],
-    "R12medio2": [
-      1436
-    ],
-    "R12dificil2": [
-      1856
-    ],
+    "R12facil1": [],
+    "R12medio1": [],
+    "R12dificil1": [],
+    "R12facil2": [],
+    "R12medio2": [],
+    "R12dificil2": [],
     "R12facil3": [],
-    "R12medio3": [
-      1436,
-      1605
-    ],
-    "R12dificil3": [
-      1856
-    ],
+    "R12medio3": [],
+    "R12dificil3": [],
     "R13facil1": [],
-    "R13medio1": [
-      1436,
-      1605
-    ],
-    "R13dificil1": [
-      1856
-    ],
+    "R13medio1": [],
+    "R13dificil1": [],
     "R13facil2": [],
-    "R13medio2": [
-      1605
-    ],
-    "R13dificil2": [
-      1856
-    ],
+    "R13medio2": [],
+    "R13dificil2": [],
     "R13facil3": [],
-    "R13medio3": [
-      1605
-    ],
-    "R13dificil3": [
-      1856
-    ],
+    "R13medio3": [],
+    "R13dificil3": [],
     "R14facil1": [],
     "R14medio1": [],
-    "R14dificil1": [
-      1856
-    ],
+    "R14dificil1": [],
     "R14facil2": [],
     "R14medio2": [],
-    "R14dificil2": [
-      1856
-    ],
+    "R14dificil2": [],
     "R14facil3": [],
     "R14medio3": [],
-    "R14dificil3": [
-      1856
-    ],
+    "R14dificil3": [],
     "R15facil1": [],
-    "R15medio1": [
-      1856
-    ],
+    "R15medio1": [],
     "R15dificil1": [],
     "R15facil2": [],
-    "R15medio2": [
-      1856
-    ],
+    "R15medio2": [],
     "R15dificil2": [],
     "R15facil3": [],
-    "R15medio3": [
-      1856
-    ],
+    "R15medio3": [],
     "R15dificil3": [],
     "R16facil1": [],
     "R16medio1": [],
     "R16dificil1": [],
-    "R16facil2": [
-      1856
-    ],
-    "R16medio2": [
-      1856
-    ],
+    "R16facil2": [],
+    "R16medio2": [],
     "R16dificil2": [],
     "R16facil3": [],
     "R16medio3": [],
@@ -3642,144 +2398,18 @@
   },
   "ranking": [
     {
-      "valor": 0.5910000000000002,
-      "usuario": "bekajuly",
-      "desafios": 39,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1605
-    },
-    {
-      "valor": 0.5470000000000003,
-      "usuario": "jessica.santos",
-      "desafios": 47,
-      "avatar": "/pessoa8.png",
-      "idUsuario": 1856
-    },
-    {
-      "valor": 0.4960000000000002,
-      "usuario": "prettystar",
-      "desafios": 37,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1436
-    },
-    {
-      "valor": 0.4470000000000001,
-      "usuario": "kaua",
-      "desafios": 24,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1713
-    },
-    {
-      "valor": 0.4370000000000001,
-      "usuario": "dheragon",
-      "desafios": 23,
-      "avatar": "/zoro4.png",
-      "idUsuario": 1717
-    },
-    {
-      "valor": 0.4180000000000001,
+      "valor": 0.20899999999999996,
       "usuario": "terror",
-      "desafios": 22,
+      "desafios": 11,
       "avatar": "/pessoa1.png",
       "idUsuario": 1133
     },
     {
-      "valor": 0.342,
-      "usuario": "anna",
-      "desafios": 18,
-      "avatar": "/pessoa8.png",
-      "idUsuario": 1760
-    },
-    {
-      "valor": 0.24699999999999994,
-      "usuario": "wolfinne",
-      "desafios": 13,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1992
-    },
-    {
-      "valor": 0.24699999999999994,
-      "usuario": "wolfin",
-      "desafios": 13,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1865
-    },
-    {
-      "valor": 0.23799999999999996,
-      "usuario": "agnaldo1000",
-      "desafios": 13,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 971
-    },
-    {
-      "valor": 0.22200000000000006,
-      "usuario": "maddu",
-      "desafios": 23,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 453
-    },
-    {
-      "valor": 0.20600000000000004,
-      "usuario": "jpssants",
-      "desafios": 21,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 287
-    },
-    {
-      "valor": 0.15200000000000008,
-      "usuario": "aghata cathania",
-      "desafios": 19,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 338
-    },
-    {
-      "valor": 0.14400000000000007,
-      "usuario": "leonagabrielli",
-      "desafios": 18,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2003
-    },
-    {
-      "valor": 0.14,
-      "usuario": "silvanalb18",
-      "desafios": 9,
-      "avatar": "/pessoa8.png",
-      "idUsuario": 1096
-    },
-    {
-      "valor": 0.138,
-      "usuario": "monica costa rodrigu",
-      "desafios": 15,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1941
-    },
-    {
       "valor": 0.133,
-      "usuario": "q9emy1",
+      "usuario": "wolfinne",
       "desafios": 7,
       "avatar": "/pessoa1.png",
-      "idUsuario": 1240
-    },
-    {
-      "valor": 0.12999999999999998,
-      "usuario": "alysson$9270",
-      "desafios": 13,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1626
-    },
-    {
-      "valor": 0.12999999999999998,
-      "usuario": "vitor",
-      "desafios": 13,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1282
-    },
-    {
-      "valor": 0.12800000000000006,
-      "usuario": "josipezzopani",
-      "desafios": 16,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 913
+      "idUsuario": 1992
     },
     {
       "valor": 0.09999999999999999,
@@ -3794,97 +2424,6 @@
       "desafios": 12,
       "avatar": "/pessoa1.png",
       "idUsuario": 619
-    },
-    {
-      "valor": 0.09600000000000003,
-      "usuario": "anapaula",
-      "desafios": 12,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2001
-    },
-    {
-      "valor": 0.09100000000000001,
-      "usuario": "mayboaventura",
-      "desafios": 9,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1959
-    },
-    {
-      "valor": 0.09,
-      "usuario": "tatyline",
-      "desafios": 10,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2012
-    },
-    {
-      "valor": 0.07500000000000001,
-      "usuario": "monike",
-      "desafios": 5,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2007
-    },
-    {
-      "valor": 0.07200000000000001,
-      "usuario": "ramonzeira99",
-      "desafios": 9,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1829
-    },
-    {
-      "valor": 0.065,
-      "usuario": "line",
-      "desafios": 6,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 413
-    },
-    {
-      "valor": 0.060000000000000005,
-      "usuario": "markjunior37",
-      "desafios": 6,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1704
-    },
-    {
-      "valor": 0.060000000000000005,
-      "usuario": "santos1998",
-      "desafios": 6,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 874
-    },
-    {
-      "valor": 0.056999999999999995,
-      "usuario": "raqueltaveira",
-      "desafios": 3,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2011
-    },
-    {
-      "valor": 0.056999999999999995,
-      "usuario": "jhoo",
-      "desafios": 3,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 754
-    },
-    {
-      "valor": 0.056,
-      "usuario": "roohpacheco1298",
-      "desafios": 7,
-      "avatar": "/pessoa12.png",
-      "idUsuario": 774
-    },
-    {
-      "valor": 0.05,
-      "usuario": "fafa63",
-      "desafios": 5,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2013
-    },
-    {
-      "valor": 0.048,
-      "usuario": "angelicasil",
-      "desafios": 6,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1900
     },
     {
       "valor": 0.044000000000000004,
@@ -3908,67 +2447,11 @@
       "idUsuario": 1997
     },
     {
-      "valor": 0.038,
-      "usuario": "tan",
-      "desafios": 2,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1180
-    },
-    {
-      "valor": 0.038,
-      "usuario": "brunoferrari26",
-      "desafios": 2,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1733
-    },
-    {
-      "valor": 0.038,
-      "usuario": "vanessa",
-      "desafios": 2,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 489
-    },
-    {
-      "valor": 0.038,
-      "usuario": "icof21",
-      "desafios": 2,
-      "avatar": "/pessoa16.png",
-      "idUsuario": 1754
-    },
-    {
       "valor": 0.036000000000000004,
       "usuario": "ciro",
       "desafios": 4,
       "avatar": "/pessoa1.png",
       "idUsuario": 776
-    },
-    {
-      "valor": 0.03,
-      "usuario": "guilherme 21",
-      "desafios": 3,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1075
-    },
-    {
-      "valor": 0.028000000000000004,
-      "usuario": "reisa06",
-      "desafios": 3,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1998
-    },
-    {
-      "valor": 0.027,
-      "usuario": "vitorsilva3007",
-      "desafios": 2,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2018
-    },
-    {
-      "valor": 0.02,
-      "usuario": "paulosilva",
-      "desafios": 2,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 157
     },
     {
       "valor": 0.019,
@@ -3986,38 +2469,24 @@
     },
     {
       "valor": 0.019,
-      "usuario": "miguel",
+      "usuario": "tan",
       "desafios": 1,
       "avatar": "/pessoa1.png",
-      "idUsuario": 1815
+      "idUsuario": 1180
     },
     {
       "valor": 0.019,
-      "usuario": "luciolara",
+      "usuario": "dheragon",
       "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 883
+      "avatar": "/zoro4.png",
+      "idUsuario": 1717
     },
     {
-      "valor": 0.019,
-      "usuario": "luciano45",
-      "desafios": 1,
+      "valor": 0.018000000000000002,
+      "usuario": "reisa06",
+      "desafios": 2,
       "avatar": "/pessoa1.png",
-      "idUsuario": 1214
-    },
-    {
-      "valor": 0.019,
-      "usuario": "jessicasantos",
-      "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1982
-    },
-    {
-      "valor": 0.019,
-      "usuario": "gabriel_vogais",
-      "desafios": 1,
-      "avatar": "/luffy4.png",
-      "idUsuario": 2
+      "idUsuario": 1998
     },
     {
       "valor": 0.01,
@@ -4025,13 +2494,6 @@
       "desafios": 1,
       "avatar": "/pessoa2.png",
       "idUsuario": 414
-    },
-    {
-      "valor": 0.01,
-      "usuario": "luciano",
-      "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 150
     },
     {
       "valor": 0.008,
@@ -4042,31 +2504,10 @@
     },
     {
       "valor": 0.008,
-      "usuario": "taehyungkim",
+      "usuario": "ramonzeira99",
       "desafios": 1,
       "avatar": "/pessoa1.png",
-      "idUsuario": 2009
-    },
-    {
-      "valor": 0.008,
-      "usuario": "fabiane01051983",
-      "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 1988
-    },
-    {
-      "valor": 0.008,
-      "usuario": "aline28",
-      "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2014
-    },
-    {
-      "valor": 0.008,
-      "usuario": "brunobraga",
-      "desafios": 1,
-      "avatar": "/pessoa1.png",
-      "idUsuario": 2016
+      "idUsuario": 1829
     }
   ],
   "banlist": [],
